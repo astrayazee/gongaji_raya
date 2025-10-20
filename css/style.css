@@ -198,15 +198,24 @@ h1.display-3 {
 }
 
 .card .icon {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: rgba(180, 161, 231, 0.267);
+  /* box-shadow: 0 0 15px rgba(45, 33, 78, 0.39); */
+  border-radius: 50%; 
+  width: 65px;
+  height: 65px;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card .icon img {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 
 .card h3 {
@@ -214,13 +223,22 @@ h1.display-3 {
   font-weight: 700;
   color: #0c0c0c;
   margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0c0c0c;
+  margin-bottom: 0.8rem;
+  text-align: left;
 }
 
 .card p {
   font-size: 0.95rem;
   color: #555555;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
