@@ -45,16 +45,45 @@ h1, h2, h3, h4, h5 {
 
 nav.navbar {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0);
+}
+
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.navbar.scrolled .nav-link {
+  color: #000000;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7c4dff;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled .hamburger .bar {
+  background-color: #7c4dff;
 }
 
 .navbar-nav {
+  display: flex;
   gap: 2rem;
 }
 
@@ -68,6 +97,12 @@ nav ul {
   gap: 2rem;
   align-items: center;
   margin-bottom: 0;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-link {
@@ -107,7 +142,7 @@ nav ul {
 
 .container {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -204,7 +239,6 @@ h1.display-3 {
   align-items: center;
 
   background: rgba(180, 161, 231, 0.267);
-  /* box-shadow: 0 0 15px rgba(45, 33, 78, 0.39); */
   border-radius: 50%; 
   width: 65px;
   height: 65px;
@@ -243,15 +277,13 @@ h1.display-3 {
 
 
 .hamburger {
-  display: block !important;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 26px;
+  display: none;
   cursor: pointer;
-  color: white;
-  position: absolute;
-  z-index: 10000 !important;
-
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  z-index: 10001;
 }
 
 .navbar .hamburger {
@@ -268,14 +300,14 @@ h1.display-3 {
   height: 100%;
   background: white;
   color: #333333;
-  transition: right 0.3s ease;
-  z-index: 12;
+  transition: left 0.3s ease;
+  z-index: 10000;
   padding: 2rem 1.5rem;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu.active {
-  right: 0;
+  left: 0;
 }
 
 .menu-header {
@@ -286,7 +318,7 @@ h1.display-3 {
 }
 
 .menu-logo {
-  height: 40px;
+  height: 38px;
 }
 
 .close-btn i {
@@ -349,7 +381,7 @@ h1.display-3 {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   nav ul {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.8);
@@ -392,13 +424,17 @@ h1.display-3 {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 26px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 12 !important;
   }
 
-  .navbar-nav {
-    display: none;
-  }
-
+  .navbar-nav, 
   .btn-claim {
     display: none;
   }
