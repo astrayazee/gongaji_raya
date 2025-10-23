@@ -25,6 +25,8 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 120px;
+  box-sizing: border-box;
 }
 
 .hero-section .video-hero {
@@ -32,7 +34,7 @@ h1, h2, h3, h4, h5 {
   top: 0; left: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 .overlay {
@@ -43,8 +45,15 @@ h1, h2, h3, h4, h5 {
   z-index: 1;
 }
 
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  margin-top: 4rem;
+}
+
 nav.navbar {
-  position: fixed;
+  position: transparent;
+  backdrop-filter: none;
   top: 0;
   left: 0;
   width: 100%;
