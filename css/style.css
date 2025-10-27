@@ -403,43 +403,33 @@ h1.display-3 {
 }
 
 
-/* .parallax {
+.parallax {
   position: relative;
-  background: #000000;
-  background-image: url("");
+  background: linear-gradient(160deg, #0c0c0c, #1a1a1a);
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  padding: 8rem 0;
+  background-position: center;
+  color: #ffffff;
+  padding: 6rem 2rem;
+  overflow: hidden;
 }
 
 .parallax-overlay {
-  background: rgba(0, 0, 0, 0.65);
-  width: 100%;
-  height: 100%;
-  padding: 6rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4rem 0;
+}
 
 .container-virtual {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: start;
-  gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
-  color: #ffffff;
+  text-align: left;
 }
 
 .intro-text-virtual {
   text-align: left;
-  margin-top: 600px;
 }
 
-.label-virtual{
+.label-virtual {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
@@ -459,22 +449,73 @@ h1.display-3 {
   line-height: 1.4;
 }
 
-.intro-text-virtual .highlight-virtual {
+.highlight-virtual {
   color: #fbff05;
   text-shadow: 0 0 15px rgba(255, 251, 0, 0.562);
 }
 
-.intro-text-virtual p {
+.vr-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.icon-virtual {
+  font-size: 2rem;
+  color: #ffeb3b;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.vr-center p {
   color: #dddddd;
   line-height: 1.7;
   font-size: 1rem;
   margin-top: 1rem;
+  max-width: 700px;
+}
+
+.btn-simulasi.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fae423;
+  color: #7c4dff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.4);
+  transition: all 0.3s ease;
+  gap: 10px;
+  width: fit-content;
+  margin: 3rem auto 0;
+  position: relative;
+  z-index: 3;
+}
+
+.btn-simulasi.center:hover {
+  background: #fff200;
+  transform: translateY(-3px);
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 4rem auto 0;
+  padding: 0;
 }
 
 .feature-box {
@@ -482,8 +523,12 @@ h1.display-3 {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1.8rem 1rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-box:hover {
@@ -491,45 +536,35 @@ h1.display-3 {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.icon-virtual {
+.feature-box .icon-virtual {
   font-size: 2rem;
   color: #ffeb3b;
-  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%; 
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem;
+  margin-bottom: 1rem;
 }
 
 .feature-box h3 {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
+  margin: 0;
 }
 
-.btn-simulasi.center {
-  display: inline-flex;
-  margin-top: 3rem;
-  background: #fae423;
-  color: #7c4dff;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.4);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-}
-
-.btn-simulasi.center:hover {
-  background: #fff200;
-  transform: translateY(-3px);
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .particle {
@@ -541,6 +576,30 @@ h1.display-3 {
   opacity: 0.6;
   animation: float 6s infinite ease-in-out;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.parallax-overlay,
+.container-virtual,
+.features-grid {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 
 
