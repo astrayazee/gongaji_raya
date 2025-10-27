@@ -24,3 +24,18 @@ window.addEventListener("scroll", function () {
     logo.src = "assets/icons/gongaji-white.svg";
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const particleContainer = document.getElementById("particles");
+  const numParticles = 30;
+
+  for (let i = 0; i < numParticles; i++) {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.top = Math.random() * 100 + "vh";
+    particle.style.animationDelay = Math.random() * 5 + "s";
+    particle.style.animationDuration = 4 + Math.random() * 4 + "s";
+    particleContainer.appendChild(particle);
+  }
+});
