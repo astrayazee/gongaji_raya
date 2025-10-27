@@ -24,4 +24,3 @@ window.addEventListener("scroll", function () {
     logo.src = "assets/icons/gongaji-white.svg";
   }
 });
-
