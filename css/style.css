@@ -403,7 +403,7 @@ h1.display-3 {
 }
 
 
-.parallax {
+/* .parallax {
   position: relative;
   background: linear-gradient(160deg, #0c0c0c, #1a1a1a);
   background-attachment: fixed;
@@ -417,7 +417,7 @@ h1.display-3 {
 .parallax-overlay {
   background: rgba(0, 0, 0, 0.6);
   padding: 4rem 0;
-}
+} */
 
 .container-virtual {
   max-width: 1200px;
