@@ -489,7 +489,7 @@ h1.display-3 {
   line-height: 1.7;
   font-size: 1rem;
   margin-top: 1rem;
-  max-width: 700px;
+  max-width: 1400px;
 }
 
 .btn-simulasi.center {
@@ -523,14 +523,14 @@ h1.display-3 {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  max-width: 700px;
+  max-width: 660px;
   margin: 3rem auto 0;
   padding: 0 1rem;
 }
 
 .feature-box {
-  width: 160px;
-  height: 140px;
+  width: 300px;
+  height: 150px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
@@ -548,13 +548,13 @@ h1.display-3 {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.feature-box .icon-virtual {
+.feature-box .icon-vr {
   font-size: 2rem;
   color: #ffeb3b;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
