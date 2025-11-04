@@ -27,15 +27,26 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const particleContainer = document.getElementById("particles");
-  const numParticles = 30;
+  const numParticles = 40; 
 
   for (let i = 0; i < numParticles; i++) {
     const particle = document.createElement("div");
     particle.classList.add("particle");
+
     particle.style.left = Math.random() * 100 + "vw";
-    particle.style.top = Math.random() * 100 + "vh";
+
+    const y = 20 + Math.random() * 60;
+    particle.style.top = y + "vh";
+
     particle.style.animationDelay = Math.random() * 5 + "s";
-    particle.style.animationDuration = 4 + Math.random() * 4 + "s";
+    particle.style.animationDuration = 5 + Math.random() * 5 + "s";
+
+    const size = 2 + Math.random() * 4;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
     particleContainer.appendChild(particle);
   }
 });
+
+
