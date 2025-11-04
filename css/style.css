@@ -422,6 +422,18 @@ h1.display-3 {
   z-index: 1;
 }
 
+.parallax-vr::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(10, 10, 10, 0.8) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
 .parallax-overlay-vr {
   position: relative;
   z-index: 2;
@@ -544,20 +556,20 @@ h1.display-3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
 
 .feature-box:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 215, 0, 0.6);
+  border-color: rgba(255, 215, 0, 0.2);
 }
 
 .feature-box .icon-vr {
   font-size: 2rem;
   color: #ffeb3b;
   background: rgba(255, 215, 0, 0.15);
-  border: 1.5px solid rgba(255, 215, 0, 0.4);
+  border: 1.5px solid rgba(255, 215, 0, 0.1);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -571,8 +583,7 @@ h1.display-3 {
 
 .feature-box:hover .icon-vr {
   background: rgba(255, 215, 0, 0.3);
-  border-color: rgba(255, 215, 0, 0.7);
-  color: #fff600;
+  border-color: rgba(255, 215, 0, 0.1);
 }
 
 .feature-box h3 {
@@ -589,18 +600,19 @@ h1.display-3 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
   pointer-events: none;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
 }
 
 .particle {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #ffdb00;
+  background: radial-gradient(circle, #ffeb3b 0%, #ffb300 80%);
   border-radius: 50%;
-  opacity: 0.6;
-  animation: float 6s infinite ease-in-out;
+  opacity: 0.5;
+  animation: float 8s infinite ease-in-out;
+  filter: blur(0.5px);
 }
 
 @keyframes float {
