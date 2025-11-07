@@ -49,4 +49,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".card-fitur");
+  const dots = document.querySelectorAll(".fitur-pagination .dot");
+  let index = 0;
+  const slideInterval = 10000;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.style.opacity = idx === i ? "1" : "0";
+      slide.style.pointerEvents = idx === i ? "auto" : "none";
+      slide.style.position = idx === i ? "relative" : "absolute";
+      slide.style.zIndex = idx === i ? "1" : "0";
+    });
+
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === i);
+    });
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+
+  setInterval(nextSlide, slideInterval);
+  showSlide(index);
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("lihat-link")) {
+    e.preventDefault();
+    const parent = e.target.closest(".fitur-text");
+    const deskLengkap = parent.querySelector(".desk-lengkap");
+    const btn = e.target;
+
+    deskLengkap.style.display = "inline";
+    btn.style.display = "none";
+  }
+});
+
 
