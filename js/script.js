@@ -96,4 +96,48 @@ document.addEventListener("click", function (e) {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const monthlyBtn = document.getElementById("monthlyBtn");
+  const yearlyBtn = document.getElementById("yearlyBtn");
+
+  const premiumPrice = document.getElementById("premiumPrice");
+  const premiumLabel = document.querySelector(".label-premium");
+  const premiumDesc = document.getElementById("premiumDesc");
+
+  const promoLabel = document.createElement("div");
+  promoLabel.classList.add("promo-label");
+  promoLabel.textContent = "Save Up To 15.5%";
+
+  const toggleContainer = document.querySelector(".toggle-subscription");
+  const introText = document.querySelector(".intro-text-subscription");
+
+  function setMonthly() {
+    premiumPrice.textContent = "49.900";
+    premiumLabel.textContent = "MONTHLY";
+    premiumDesc.textContent = "Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal";
+    monthlyBtn.classList.add("active");
+    yearlyBtn.classList.remove("active");
+
+    if (introText.contains(promoLabel)) {
+      promoLabel.remove();
+    }
+  }
+
+  function setYearly() {
+    premiumPrice.textContent = "500.000";
+    premiumLabel.textContent = "YEARLY";
+    premiumDesc.textContent = "Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal";
+    yearlyBtn.classList.add("active");
+    monthlyBtn.classList.remove("active");
+
+    if (!introText.contains(promoLabel)) {
+      introText.insertBefore(promoLabel, toggleContainer);
+    }
+  }
+
+  monthlyBtn.addEventListener("click", setMonthly);
+  yearlyBtn.addEventListener("click", setYearly);
+
+  setMonthly();
+});
 
