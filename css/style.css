@@ -1180,6 +1180,24 @@ h1.display-3 {
 }
 
 
+.parallax-test {
+  position: relative;
+  /* background: url('') center center / cover no-repeat fixed; */
+  color: #ffffff;
+  padding: 6rem 2rem;
+  overflow: hidden;
+}
+
+.container-test {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.highlight-test {
+  color: #fbff05;
+}
+
 
 
 @media (max-width: 992px) and (min-width: 768px) {
