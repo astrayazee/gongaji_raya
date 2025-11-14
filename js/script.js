@@ -141,3 +141,52 @@ document.addEventListener("DOMContentLoaded", function () {
   setMonthly();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card-test");
+  const dots = document.querySelectorAll(".pagination-test .dot");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  let current = 0;
+  const visibleCards = 3;
+
+  function updateSlider(index) {
+    const track = document.querySelector(".slider-track");
+    const offset = -index * (100 / visibleCards);
+    track.style.transform = `translateX(${offset}%)`;
+
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === index + 1);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    current = (current - 1 + cards.length) % cards.length;
+    updateSlider(current);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    current = (current + 1) % cards.length;
+    updateSlider(current);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      current = i;
+      updateSlider(current);
+    });
+  });
+
+  setInterval(() => {
+    current = (current + 1) % cards.length;
+    updateSlider(current);
+  }, 6000);
+
+  updateSlider(current);
+});
+
+
+
