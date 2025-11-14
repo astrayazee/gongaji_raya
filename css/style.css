@@ -1238,6 +1238,130 @@ h1.display-3 {
   width: 100%;
 }
 
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.profile-icon i {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+}
+
+.card-test.active .profile-icon i {
+  color: #ffdf00;
+  text-shadow: 0 0 12px rgba(255, 222, 0, 0.6);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(180, 200, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border: 3px solid transparent;
+}
+
+.icon-circle i {
+  font-size: 45px;
+  color: #a0a0a0;
+  transition: all 0.5s ease;
+}
+
+.card-test.active .icon-circle {
+  background: rgba(60, 100, 255, 0.2);
+  border: 3px solid #ffdf00;
+  box-shadow: 0 0 10px rgba(255, 223, 0, 0.4);
+}
+
+.card-test.active .icon-circle i {
+  color: #b0d0ff;
+}
+
+.stars {
+  color: #ffdf00;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.card-content p {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0, 0.9);
+}
+
+.card-content h3 {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-content span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.pagination-test {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+}
+
+.pagination-test .dot {
+  width: 10px;
+  height: 10px;
+  background: #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagination-test .dot.active {
+  background: #6b6a6d81;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffdd0018;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(143, 143, 143, 0.096);
+}
+
+.nav-btn.prev {
+  left: 20px;
+}
+
+.nav-btn.next {
+  right: 20px;
+}
+
+
 
 
 @media (max-width: 992px) and (min-width: 768px) {
