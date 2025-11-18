@@ -1,622 +1,1560 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Ngaji Landing Page Project</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-</head>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-            <div class="logo">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img id="navbar-logo" src="assets/icons/gongaji-white.svg" alt="Go Ngaji Logo">
-                </a>
-            </div>
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
 
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  box-sizing: border-box;
+}
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Tentang Aplikasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Fitur</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Subscription</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="#" target="_blank">Kemitraan</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="#" target="_blank">Daftar Mitra</a>
-                    </li>
-                </ul>
-                <div>
-                    <a class="btn btn-claim btn-hover-secondary text-capitalize" href="">Claim Voucher</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-    <div class="menu-header">
-      <img src="https://gongaji.id/assets/images/gongaji-coloured.svg" alt="Go Ngaji Logo" class="menu-logo">
-      <div class="close-btn" id="closeBtn">
-        <i class="fa-solid fa-xmark"></i>
-      </div>
-    </div>
+.hero-section .video-hero {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
 
-    <p class="menu-title">MENU</p>
-    <ul>
-      <li><a href="#"><i class="fa-solid fa-house"></i> Beranda</a></li>
-      <li><a href="#"><i class="fa-solid fa-comments"></i> Tentang Aplikasi</a></li>
-      <li><a href="#"><i class="fa-solid fa-layer-group"></i> Fitur</a></li>
-      <li><a href="#"><i class="fa-solid fa-ticket"></i> Subscription</a></li>
-      <li><a href="#"><i class="fa-solid fa-handshake"></i> Kemitraan</a></li>
-      <li><a href="#"><i class="fa-solid fa-user-group"></i> Daftar Mitra</a></li>
-    </ul>
-  </div>
-<section class="hero-section">
-    <video autoplay muted loop playsinline class="video-hero">
-        <source src="images/198048-906522343_large.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
+.overlay {
+  position: absolute;
+  top: 0; left: 0; 
+  width: 100%; height: 100%; 
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
 
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="display-3 fw-bold mb-4">
-                    Islam Made Easy, Just for You.
-                </h1>
-                <p class="fs-4 mb-5">
-                    Go Ngaji Sahabat Perjalanan Al-Qur'an-mu
-                </p>
-                <div class="download-buttons">
-                    <a href="#" target="_blank"
-                        class="store-button">
-                    <span class="d-inline-block me-2">
-                        <img src="assets/icons/App-Store.svg" alt="Download on App Store"
-                            style="height: 50px;">
-                    </span>
-                    </a>
-                    <a href="#" target="_blank"
-                        class="store-button">
-                        <span class="d-inline-block me-2">
-                            <img src="assets/icons/Play-Store.svg" alt="Download on Play Store"
-                            style="height: 50px;">
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  margin-top: 4rem;
+}
 
-<section class="tentang-section">
-    <div class="container-tentang">
-        <div class="intro-text-tentang">
-            <span class="label">TENTANG APLIKASI</span>
-            <h2>Solusi Cerdas Belajar Qur'an?<br><span class="highlight">Go Ngaji</span> Jawabannya!</h2>
-        </div>
+nav.navbar {
+  position: transparent;
+  backdrop-filter: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0);
+}
 
-        <div class="cards">
-            <div class="card">
-                <div class="icon">
-                    <img src="images/go-hafalan.png" alt="">
-                </div>
-                <h4>01</h4>
-                <h3>Apa itu Go Ngaji?</h3>
-                <p>Platform digital Islami yang dirancang untuk membantu umat Muslim belajar, menghafal, dan memahami Al-Qur'an serta ajaran Islam dengan cara yang lebih modern dan menyenangkan.</p>
-            </div>
+.navbar.scrolled {
+  background: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
 
-            <div class="card">
-                <div class="icon">
-                    <img src="images/go-learn.png" alt="">
-                </div>
-                <h4>02</h4>
-                <h3>Misi Kami</h3>
-                <p>Menghadirkan solusi pembelajaran Islam berbasis teknologi, yang mudah diakses oleh semua kalangan, serta mendukung proses ngaji, tilawah, dan pembinaan iman secara berkelanjutan.</p>
-            </div>
+.navbar.scrolled .nav-link {
+  color: #000000;
+}
 
-            <div class="card">
-                <div class="icon">
-                    <img src="images/tebar-mushaf.png" alt="">
-                </div>
-                <h4>03</h4>
-                <h3>Untuk Siapa?</h3>
-                <p>Go Ngaji cocok untuk anak-anak, remaja, orang tua, guru ngaji, hingga lembaga pendidikan yang ingin menjadikan aktivitas ngaji lebih interaktif dan relevan di era digital.</p>
-            </div>
-        </div>
-    </div>
-</section>
+.navbar-nav .nav-link:hover {
+  color: #7c4dff;
+}
 
-<section class="parallax">
-  <div class="parallax-overlay">
-    <div class="container-vr">
-      <div class="intro-text">
-        <span class="label">VIRTUAL REALITY</span>
-        <h2>
-          Rasakan Pengalaman Virtual Reality<br>
-          Manasik Haji dan Umrah<br>
-          <span class="highlight-vr">Go Ngaji</span>
-        </h2>
-      </div>
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
 
-      <div class="vr-center">
-        <div class="icon-vr">
-          <i class="fa-solid fa-vr-cardboard" alt="Virtual Reality"></i>
-        </div>
+.navbar.scrolled .hamburger .bar {
+  background-color: #7c4dff;
+}
 
-        <p>
-          Rasakan pengalaman manasik Haji dan Umrah yang lebih mendalam melalui teknologi Virtual Reality.
-          <br>Nikmati setiap rukun ibadah secara interaktif, edukatif, dan mempersiapkan diri Anda sebelum
-          <br>berangkat ke Tanah Suci. Lebih siap, lebih percaya diri.
-        </p>
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
 
-      </div>
+nav .logo img {
+  height: 38px;
+}
 
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fa-solid fa-kaaba"></i></div>
-          <h3>Manasik Ihram</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-mosque"></i></div>
-          <h3>Wukuf di Arafah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-bed"></i></div>
-          <h3>Mabit di Muzdalifah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-people-arrows"></i></div>
-          <h3>Lempar Jumrah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-rotate-left"></i></div>
-          <h3>Tawaf</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-person-walking"></i></div>
-          <h3>Sa'i</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-scissors"></i></div>
-          <h3>Tahalul</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-chalkboard-user"></i></div>
-          <h3>Pembelajaran Praktis</h3>
-        </div>
-    </div>
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 0;
+}
 
-    <a href="#" class="btn-simulasi center">
-        <i class="fa-solid fa-vr-cardboard"></i> MULAI SIMULASI
-    </a>
-    </div>
-  </div>
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-  <div id="particles"></div>
-</section>
+.nav-link {
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
 
-<section class="parallax-tm">
-  <div class="parallax-overlay-tm">
-    <div class="container-tm">
-      <div class="intro-text-tm">
-        <span class="label-tm">TEBAR MUSHAF</span>
-        <h2>
-          Tebar Mushaf
-          <span class="highlight-tm">Al-Qur'an</span>
-          <br>Untuk Kebaikan Umat
-        </h2>
-      </div>
+.nav-link:hover {
+  color: #7c4dff; 
+  transform: scale(1.03);
+}
 
-      <a href="#" class="btn-donasi">
-        <i class="fa-solid fa-book-quran"></i> DONASI<br>SEKARANG
-      </a>
-    </div>
-  </div>
-</section>
 
-<section class="fitur-section">
-  <div class="container-fitur">
-    <div class="intro-text-fitur">
-      <span class="label">FITUR</span>
-      <h2>Jelajahi Fitur-Fitur<br>Keunggulan <span class="highlight">Kami.</span></h2>
-    </div>
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-    <div class="fitur-slider">
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-1.webp" alt="Home Screen">
-        <div class="fitur-text">
-          <span class="label">HOME SCREEN</span>
-          <h3>Selamat Datang di<br>Go Ngaji</h3>
-          <p>Temukan pengalaman belajar Al-Qur'an yang lebih personal dan interaktif dengan tampilan home screen yang intuitif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke fitur favorit Anda</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat jadwal ibadah harian</li>
-          </ul>
-        </div>
-      </div>
+.btn-claim {
+  background-color: #9a39ac;
+  color: #ffffff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-2.webp" alt="Home Navigation">
-        <div class="fitur-text">
-          <span class="label">HOME NAVIGATION</span>
-          <h3>Navigasi Pintar</h3>
-          <p>Jelajahi semua fitur GoNgaji dengan mudah melalui navigasi yang dirancang untuk kenyamanan Anda.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Menu yang mudah diakses</li>
-            <li><i class="fa-solid fa-circle-check"></i> Navigasi cepat ke fitur utama</li>
-          </ul>
-        </div>
-      </div>
+.btn-claim:hover {
+  background-color: #7a2c88;
+}
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-3.webp" alt="QR Reader Buku - Content">
-        <div class="fitur-text">
-          <span class="label">QR READER BUKU - CONTENT</span>
-          <h3>Konten Digital Interaktif</h3>
-          <p>Buka dunia pembelajaran baru dengan memindai QR code pada buku fisik Anda untuk mengakses konten digital eksklusif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses konten multimedia eksklusif</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pembelajaran interaktif yang menyenangkan</li>
-          </ul>
-        </div>
-      </div>
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-4.webp" alt="Mushaf Hafalan">
-        <div class="fitur-text">
-          <span class="label">MUSHAF HAFALAN</span>
-          <h3>Hafalan Al-Qur'an<br>Digital</h3>
-          <p>Tingkatkan hafalan Al-Qur'an Anda dengan fitur khusus yang dirancang untuk memudahkan proses menghafal.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Mode hafalan dengan pengulangan otomatis</li>
-            <li><i class="fa-solid fa-circle-check"></i> Tracking progress hafalan harian</li>
-          </ul>
-        </div>
-      </div>
+h1.display-3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-5.webp" alt="Mushaf Tilawah">
-        <div class="fitur-text">
-          <span class="label">MUSHAF TILAWAH</span>
-          <h3>Baca Al-Qur'an dengan<br>Nyaman</h3>
-          <p>Nikmati pengalaman membaca Al-Qur'an yang lebih baik dengan berbagai pilihan mushaf dan fitur pendukung.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Berbagai varian mushaf populer</li>
-            <li><i class="fa-solid fa-circle-check"></i> Audio murottal berkualitas tinggi</li>
-          </ul>
-        </div>
-      </div>
+.download-buttons img {
+  height: 60px;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-6.webp" alt="Dzikir">
-        <div class="fitur-text">
-          <span class="label">DZIKIR</span>
-          <h3>Dzikir Harian</h3>
-          <p>Jadikan dzikir sebagai kebiasaan harian dengan panduan lengkap dan pengingat yang tepat waktu.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Koleksi dzikir pagi dan petang</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat dzikir otomatis</li>
-          </ul>
-        </div>
-      </div>
+.download-buttons img:hover {
+  transform: scale(1.05);
+}
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-7.webp" alt="Belajar Ngaji">
-        <div class="fitur-text">
-          <span class="label">BELAJAR NGAJI</span>
-          <h3>Belajar Bersama Ustadz</h3>
-          <p class="desk-singkat">
-            Belajar Ngaji adalah ruang belajar Islam yang interaktif dan menyenangkan,
-            bersama ustadz dan ustadzah yang berpengalaman. Mulai dari tahsin, tilawah,
-            <a href="#" class="lihat-link">Lihat Selengkapnya</a>
-          </p>
-          <p class="desk-lengkap">
-            hafalan Iqro, hingga pemahaman dasar-dasar agama Islam—semua bisa diakses
-            secara online maupun offline di kota Anda.
-          </p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Materi lengkap: tahsin, tahfidz, tilawah, hafalan, dan lainnya</li>
-            <li><i class="fa-solid fa-circle-check"></i> Didampingi langsung oleh ustadz dan ustadzah kompeten</li>
-          </ul>
-        </div>
-      </div>
+.container display-3 fw-bold mb-4 {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  z-index: 2;
+}
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-8.webp" alt="Go Library">
-        <div class="fitur-text">
-          <span class="label">GO LIBRARY</span>
-          <h3>Perpustakaan Digital<br>Islam</h3>
-          <p>Akses ribuan buku Islam dalam genggaman Anda dengan fitur pencarian dan bookmark yang canggih.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Koleksi buku Islam terlengkap</li>
-            <li><i class="fa-solid fa-circle-check"></i> Baca offline dan sinkronisasi otomatis</li>
-          </ul>
-        </div>
-      </div>
+.container fs-4 mb-5 {
+  color: #c4c4c4 !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  z-index: 2;
+}
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-9.webp" alt="QR Reader Qur'an">
-        <div class="fitur-text">
-          <span class="label">QR READER QUR'AN</span>
-          <h3>Akses Cepat ke<br>Al-Qur'an</h3>
-          <p>Pindai QR code pada mushaf fisik Anda untuk langsung mengakses konten digital terkait.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke surah dan ayat</li>
-            <li><i class="fa-solid fa-circle-check"></i> Tafsir dan terjemahan instan</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-10.webp" alt="QR Reader Buku">
-        <div class="fitur-text">
-          <span class="label">QR READER BUKU</span>
-          <h3>Konten Digital Eksklusif</h3>
-          <p>Buka akses ke konten digital eksklusif dengan memindai QR code pada buku fisik Anda.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Konten multimedia interaktif</li>
-            <li><i class="fa-solid fa-circle-check"></i> Materi tambahan dan latihan</li>
-          </ul>
-        </div>
-      </div>
+.tentang-section {
+  background-color: #f9f9ff;
+  color: #333030;
+  padding: 6rem 1.5rem;
+  text-align: left;
+  margin-top: 0;
+  position: relative;
+  z-index: 5;
+}
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-11.webp" alt="Virtual Reality">
-        <div class="fitur-text">
-          <span class="label">VIRTUAL REALITY</span>
-          <h3>Pengalaman Haji &<br>Umrah Virtual</h3>
-          <p>Jelajahi pengalaman haji dan umrah secara virtual dengan teknologi VR yang imersif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Simulasi manasik haji dan umrah</li>
-            <li><i class="fa-solid fa-circle-check"></i> Panduan visual interaktif</li>
-          </ul>
-        </div>
-      </div>
+.container-tentang {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-12.webp" alt="Digital Assistant">
-        <div class="fitur-text">
-          <span class="label">DIGITAL ASSISTANT</span>
-          <h3>Asisten Digital Islami</h3>
-          <p>Dapatkan bantuan dan informasi Islami kapan saja dengan asisten digital yang cerdas.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Jawaban cepat untuk pertanyaan Islami</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat ibadah dan jadwal</li>
-          </ul>
-        </div>
-      </div>
+.label-go {
+  display: inline-block;
+  background-color: #dcd5f8;
+  color: #7c4dff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
 
-      <div class="fitur-pagination">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
-  </div>
-</section>
+.intro-text-tentang h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
 
-<section class="subscription-section">
-  <div class="container-subscription">
-    <div class="intro-text-subscription">
-      <span class="label">SUBSCRIPTION</span>
-      <h2>Bagaimana informasi subscription di<br>Go Ngaji?</h2>
-      <p>Pilih paket yang sesuai dengan kebutuhan belajar Anda</p>
+.intro-text-tentang .highlight {
+  color: #7c4dff;
+}
 
-      <div class="toggle-subscription">
-        <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
-        <button class="toggle-btn" id="yearlyBtn">Yearly</button>
-      </div>
-    </div>
+.cards {
+  flex: 1 1 55%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
 
-    <div class="subscription-cards">
-      <div class="card-subscription free">
-        <span class="label-card">CLAIM VOUCHER</span>
-        <p class="rp">Rp</p>
-        <h3 class="price">Gratis</h3>
-        <span class="label">1 Tahun</span>
-        <p class="desc">
-          Akses eksklusif khusus pemilik Mushaf Syaamil Qur'an premium!
-        </p>
-        <ul>
-          <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-          <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-          <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-        </ul>
-        <button class="btn-warning">CLAIM VOUCHER</button>
-      </div>
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
 
-      <div class="card-subscription premium">
-        <div class="popular">Most Popular</div>
-          <span class="label-card-premium">PREMIUM</span>
-          <p class="rp">RP</p>
-          <h3 class="price-premium" id="premiumPrice">49.900</h3>
-          <span class="label-premium">MONTHLY</span>
-          <p class="desc-premium" id="premiumDesc">
-            Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal
-          </p>
-          <ul>
-            <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-            <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-            <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-          </ul>
-          <button class="btn-warning">UPGRADE PREMIUM!</button>
-      </div>
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
 
-      <div class="card-subscription free">
-        <span class="label-card">CLAIM VOUCHER</span>
-        <p class="rp">Rp</p>
-        <h3 class="price">Gratis</h3>
-        <span class="label">3 Bulan</span>
-        <p class="desc">
-          Gunakan Mushaf Syaamil Haji & Umrah untuk membuka semua fitur!
-        </p>
-        <ul>
-          <li><i class="far fa-circle-check"></i> Akses semua fitur Premium</li>
-          <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-          <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-          <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-          <li><i class="far fa-circle-check"></i> Akses Virtual Reality Haji & Umrah Selamanya</li>
-        </ul>
-        <button class="btn-warning">CLAIM VOUCHER</button>
-      </div>
-    </div>
-  </div>
-</section>
+.card .icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(180, 161, 231, 0.267);
+  border-radius: 50%; 
+  width: 65px;
+  height: 65px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-<section class="parallax-test">
-  <div class="parallax-overlay">
-    <div class="container-test">
-      <div class="intro-text">
-        <span class="label">TESTIMONI</span>
-        <h2>
-          Apa kata Mereka 
-          <br>Tentang <span class="highlight-test">Go Ngaji</span>
-        </h2>
-      </div>
+.card .icon img {
+  height: 60px;
+  width: 60px;
+}
 
-      <div class="fitur-slider">
-        <button class="nav-btn prev">
-          <i class="far fa-chevron-left"></i>
-        </button>
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c0c0c;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
 
-        <div class="slider-track">
-          <div class="card-test active">
-            <div class="card-top-line"></div>
-            <div class="profile-icon">
-              <div class="icon-circle">
-                <i class="fas fa-circle-user"></i>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <div class="card-content">
-              <p>Masyaallah, alhamdulillah nemu aplikasi yang super duper lengkap,
-                bukan cuma mushaf yang bisa buat tilawah, tapi juga sahabat dalam menghafal,
-                belum fitur-fitur lainnya, bisa berbagi ayat dalam bentu gambar,
-                ada perpustakaannya, ada pengingat waktu shalat yang akan muncul
-                di layar hp dan pengingat untuk tilawah. Barakallahu fiik Sukses terus buat Syaamil Quran.</p>
-              <h3>Ummu Rochimah</h3>
-              <span>Pengguna</span>
-            </div>
-          </div>
+.card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0c0c0c;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
 
-          <div class="card-test">
-            <div class="card-top-line"></div>
-            <div class="profile-icon">
-              <div class="icon-circle">
-                <i class="fas fa-circle-user"></i>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <div class="card-content">
-              <p>Alhamdulillah aplikasi yang sangat bermanfaat
-                untuk mempermudah hafalan Al Qur'an</p>
-              <h3>Agus Mukti Alam</h3>
-              <span>Pengguna</span>
-            </div>
-          </div>
+.card p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  text-align: left;
+}
 
-          <div class="card-test">
-            <div class="card-top-line"></div>
-            <div class="profile-icon">
-              <div class="icon-circle">
-                <i class="fas fa-circle-user"></i>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <div class="card-content">
-              <p>Sangat membantu dalam upaya kita selalu terkoneksi dgn al quran.
-                Fitur2nya juga lumayan lengkap. Barakallah</p>
-              <h3>Ahmad Abu Hasydan</h3>
-              <span>Pengguna</span>
-            </div>
-          </div>
 
-          <div class="card-test">
-            <div class="card-top-line"></div>
-            <div class="profile-icon">
-              <div class="icon-circle">
-                <i class="fas fa-circle-user"></i>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <div class="card-content">
-              <p>Aplikasi yang sangat bagus, banyak ilmu didalamnya...
-                Wajib download nih bagi semua muslim...</p>
-              <h3>Atep Kurniawan</h3>
-              <span>Pengguna</span>
-            </div>
-          </div>
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  z-index: 10001;
+}
 
-          <div class="card-test">
-            <div class="card-top-line"></div>
-            <div class="profile-icon">
-              <div class="icon-circle">
-                <i class="fas fa-circle-user"></i>
-              </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <div class="card-content">
-              <p>Masyaallah Tabarakallah, ada aplikasi sebagus dan sebaik ini.
-                Insyaallah ini aplikasi sangat bermanfaat. Dari awal download
-                dan log in bikin hati senang, tenang dan tentram.
-                Biasanya saat loading ada keterangan loading atau himbauan untuk
-                sabar menunggu. Di aplikasi ini beda banget, disarankan menunggu
-                sambil berdzikir. Belum lagi kita bisa mencari kata apa saja yang
-                kita inginkan, misal saya ketik kata kemudahan, disitu akan muncul
-                semua ayat yang berkaitan dengan kemudahan. Keren pokoknya.</p>
-              <h3>Linggar Agus</h3>
-              <span>Pengguna</span>
-            </div>
-          </div>
-        </div>
+.navbar .hamburger {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
 
-        <button class="nav-btn next">
-          <i class="far fa-chevron-right"></i>
-        </button>
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: #333333;
+  transition: left 0.3s ease;
+  z-index: 10000;
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+}
 
-        <div class="pagination-test">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </div>
-    </div>
-  </div> 
-</section>
+.mobile-menu.active {
+  left: 0;
+}
 
-    <script src="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.menu-logo {
+  height: 38px;
+}
+
+.close-btn i {
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu a i {
+  font-size: 1.2rem;
+  color: #008080;
+}
+
+.mobile-menu .menu-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin-bottom: 1rem;
+}
+
+.mobile-menu ul li a i {
+  color: #7c4dff;
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-menu ul li a {
+  display: flex;
+  align-items: center;
+  gap: 14px; 
+  color: #333;
+  font-weight: 500;
+}
+
+.mobile-menu ul li a:hover i {
+  color: #5b33e1;
+  transform: scale(1.1);
+}
+
+
+.parallax {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1592326871020-04f58c1a52f3?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center / cover no-repeat fixed;
+  color: #ffffff;
+  padding: 6rem 2rem;
+  overflow: hidden;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.parallax::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(10, 10, 10, 0.8) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.parallax-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+.container-vr {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.label {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.intro-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.highlight-vr {
+  color: #fbff05;
+  text-shadow: 0 0 15px rgba(255, 251, 0, 0.562);
+}
+
+.vr-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.icon-vr {
+  font-size: 3rem;
+  color: #ffeb3b;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 215, 0, 0.4);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.vr-center p {
+  color: #dddddd;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 1400px;
+}
+
+.btn-simulasi.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fae423;
+  color: #7c4dff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 0, 0.4);
+  transition: all 0.3s ease;
+  gap: 10px;
+  width: fit-content;
+  margin: 3rem auto 0;
+  position: relative;
+  z-index: 3;
+}
+
+.btn-simulasi.center:hover {
+  background: #fff200;
+  transform: translateY(-3px);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 660px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+}
+
+.feature-box {
+  width: 300px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(251, 255, 0, 0.2);
+  border-radius: 18px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1px);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+.feature-box .icon-vr {
+  font-size: 2rem;
+  color: #ffeb3b;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1.5px solid rgba(255, 215, 0, 0.1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.feature-box:hover .icon-vr {
+  background: rgba(255, 215, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.1);
+}
+
+.feature-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, #ffeb3b 0%, #ffb300 80%);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 8s infinite ease-in-out;
+  filter: blur(0.5px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.parallax-overlay,
+.container-virtual,
+.features-grid {
+  position: relative;
+  z-index: 2;
+}
+
+
+.parallax-tm {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1629273229664-11fabc0becc0?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center center / cover no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.parallax-tm::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.parallax-overlay-tm {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+.container-tm {
+  display: flex;
+  z-index: 2;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.intro-text-tm {
+  text-align: left;
+}
+
+.label-tm {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.intro-text-tm h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.highlight-tm {
+  color: #fbff05;
+}
+
+.btn-donasi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fae423;
+  color: #7c4dff;
+  padding: 0.8rem 3.3rem;
+  border-radius: 50px;
+  font-weight: 610;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  line-height: 1.3;
+  position: relative;
+  top: 0.5rem;
+  gap: 23px;
+  margin-left: auto;
+}
+
+.btn-donasi:hover {
+  background: #fff200;
+  transform: translateY(-3px);
+}
+
+
+
+.fitur-section {
+  background-color: #f9f9ff;
+  color: #333030;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.container-fitur {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro-text-fitur {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 3rem;
+}
+
+.intro-text-fitur .highlight {
+  color: #7c4dff;
+}
+
+.fitur-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card-fitur {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.5s ease;
+}
+
+.card-fitur img {
+  width: 100%;
+  max-width: 272px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.fitur-text {
+  flex: 1;
+  text-align: left;
+  padding: 1.5rem 2rem;
+}
+
+.fitur-text .label {
+  font-weight: 600;
+  color: #7c4dff;
+  font-size: 1rem;
+}
+
+.fitur-text h3 {
+  font-size: 2rem;
+  color: #111111;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.desk-lengkap {
+  display: none;
+  margin-top: 0.5rem;
+  color: #555555;
+}
+
+.fitur-text p {
+  color: #444444;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.card-fitur.kiri {
+  flex-direction: row-reverse;
+}
+
+.card-fitur.kanan {
+  flex-direction: row;
+}
+
+.lihat-link {
+  color: #7c4dff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.3s;
+}
+
+.lihat-link:hover {
+  color: #5a36cc;
+}
+
+.fitur-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.4rem;
+}
+
+.fitur-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333333;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.fitur-list i {
+  color: #7c4dff;
+  font-size: 1rem;
+}
+
+.fitur-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 10px;
+}
+
+.fitur-pagination .dot {
+  width: 12px;
+  height: 12px;
+  background: #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fitur-pagination .dot.active {
+  background: #7c4dff;
+  transform: scale(1.2);
+}
+
+
+
+.subscription-section {
+  background: linear-gradient(180deg, #6a5ae0 0%, #7f7bff 100%);
+  padding: 80px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container-subscription {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text-subscription .label {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.intro-text-subscription h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.intro-text-subscription p {
+  color: #e6e6e6;
+  margin-top: 10px;
+}
+
+.toggle-subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 4px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.toggle-btn.active {
+  background: #ffd600;
+  color: #502fb6;
+}
+
+.toggle-btn:hover {
+  opacity: 0.9;
+}
+
+.promo-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffd600; 
+  color: #673de6; 
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 7px 18px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 217, 61, 0.7);
+  animation: fadeIn 0.3s ease-in-out;
+  margin: 0 auto 10px auto;
+  width: fit-content;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subscription-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.card-subscription {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px 30px;
+  width: 360px;
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.card-subscription:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-subscription .label-card {
+  display: block;
+  text-align: center;
+  color: #673de6;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.card-subscription .rp {
+  font-size: 16px;
+  font-weight: 500;
+  color:#666666;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.card-subscription .price {
+  font-size: 44px;
+  color: #673de6;
+  font-weight: 700;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.card-subscription .label {
+  display: inline-block;
+  background: #ede5ff;
+  color: #673de6;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 6px 16px;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.card-subscription .desc {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  min-height: 60px;
+}
+
+.card-subscription ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.card-subscription li {
+  margin: 0;
+  padding: 12px 0;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #5050503b;
+}
+
+.card-subscription li:last-child {
+  border-bottom: none;
+}
+
+.card-subscription .far {
+  color: #26c281;
+}
+
+.card-subscription.premium {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ffd600;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 214, 0, 0.3);
+}
+
+.card-subscription .label-card-premium {
+  display: block;
+  text-align: center;
+  color: #ffd600;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.card-subscription.premium .rp {
+  font-size: 16px;
+  font-weight: 500;
+  color:#ffffff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.card-subscription .price-premium {
+  font-size: 42px;
+  color: #ffd600;
+  margin: 5px 0;
+}
+
+.card-subscription .label-premium {
+  display: inline-block;
+  background: #ffffff27;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 6px 16px;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.card-subscription .desc-premium {
+  color: #ffd600;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.card-subscription.premium ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.card-subscription.premium li {
+  margin: 0;
+  padding: 12px 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ffffff46;
+}
+
+.popular {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffd600;
+  color: #333333;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.card-subscription .btn-warning {
+  align-self: center;
+  margin-top: auto;
+}
+
+.btn-warning {
+  background: #ffd600;
+  border: none;
+  color: #333333;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  width: 100%;
+  align-self: center;
+  box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
+}
+
+.btn-warning:hover {
+  background: #ffea62;
+}
+
+
+
+.parallax-test {
+  position: relative;
+  /* background: url('') center center / cover no-repeat fixed; */
+  color: #ffffff;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.container-test {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.highlight-test {
+  color: #fbff05;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  gap: 1.5rem;
+}
+
+.card-test {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  flex: 0 0 30%;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  backdrop-filter: blur(3px);
+  position: relative;
+  transition: all 0.6s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+}
+
+.card-test.active {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 221, 0, 0.185);
+  opacity: 1;
+}
+
+.card-top-line {
+  position: absolute;
+  top: 0; left: 0;
+  width: 0%; height: 3px;
+  background: #ffdf00;
+  border-radius: 10px 10px 0 0;
+  transition: width 0.4s ease;
+}
+
+.card-test.active .card-top-line {
+  width: 100%;
+}
+
+.profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.profile-icon i {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+}
+
+.card-test.active .profile-icon i {
+  color: #ffdf00;
+  text-shadow: 0 0 12px rgba(255, 222, 0, 0.6);
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(180, 200, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border: 3px solid transparent;
+}
+
+.icon-circle i {
+  font-size: 45px;
+  color: #a0a0a0;
+  transition: all 0.5s ease;
+}
+
+.card-test.active .icon-circle {
+  background: rgba(60, 100, 255, 0.2);
+  border: 3px solid #ffdf00;
+  box-shadow: 0 0 10px rgba(255, 223, 0, 0.4);
+}
+
+.card-test.active .icon-circle i {
+  color: #b0d0ff;
+}
+
+.stars {
+  color: #ffdf00;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.card-content p {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0, 0.9);
+}
+
+.card-content h3 {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-content span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.pagination-test {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+}
+
+.pagination-test .dot {
+  width: 10px;
+  height: 10px;
+  background: #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagination-test .dot.active {
+  background: #6b6a6d81;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffdd0018;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(143, 143, 143, 0.096);
+}
+
+.nav-btn.prev {
+  left: 20px;
+}
+
+.nav-btn.next {
+  right: 20px;
+}
+
+
+
+
+@media (max-width: 992px) and (min-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  h1.display-3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+  }
+
+  .download-buttons img {
+    height: 50px;
+  }
+
+  .intro-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 26px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 12 !important;
+  }
+
+  .navbar-nav, 
+  .btn-claim {
+    display: none;
+  }
+
+  .container-virtual {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .intro-text-virtual {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
+  .parallax {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin-top: 2.5rem;
+  }
+
+  .feature-box {
+    width: 150px;
+    height: 130px;
+  }
+
+  .feature-box .icon-vr {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .intro-text-tm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container-tm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-donasi {
+    margin: 0 auto;
+  }
+
+
+  .card-fitur {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .card-fitur img {
+    width: 100%;
+  }
+
+  .fitur-text {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+
+  .subscription-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .card-subscription {
+    width: 90%;
+    max-width: 360px;
+    min-height: 460px;
+    padding: 25px 20px;
+  }
+
+  .card-subscription .price {
+    font-size: 32px;
+  }
+
+  .card-subscription ul {
+    margin-bottom: 20px;
+  }
+
+  .card-subscription li {
+    font-size: 13px;
+  }
+
+  .popular {
+    top: -12px;
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .btn-warning {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+
+  .card-test {
+    flex: 0 0 45%;
+  }
+
+  .card-test {
+    flex: 0 0 85%;
+  }
+
+  .nav-btn.prev {
+    left: 5px;
+  }
+
+  .nav-btn.next {
+    right: 5px;
+  }
+
+  .intro-text h2 {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .parallax {
+    background-attachment: fixed;
+  }
+}
+
+
