@@ -1185,7 +1185,7 @@ h1.display-3 {
   position: relative;
   /* background: url('') center center / cover no-repeat fixed; */
   color: #ffffff;
-  padding: 6rem 0;
+  padding: 7rem 0;
   overflow: hidden;
 }
 
@@ -1193,6 +1193,7 @@ h1.display-3 {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 20px;
 }
 
 .highlight-test {
@@ -1201,29 +1202,29 @@ h1.display-3 {
 
 .slider-track {
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.7s ease-in-out;
   gap: 1.5rem;
 }
 
 .card-test {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  flex: 0 0 30%;
-  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 22px;
+  width: 33%;
   padding: 2rem 1.5rem;
+  flex-shrink: 0;
+  opacity: 0.55;
+  transition: 0.5s ease-in-out;
+  border: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(3px);
   position: relative;
-  transition: all 0.6s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 0.7;
 }
 
 .card-test.active {
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.18);
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(255, 221, 0, 0.185);
+  transform: scale(1.06);
   opacity: 1;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(255,223,0,0.18);
 }
 
 .card-top-line {
@@ -1231,7 +1232,7 @@ h1.display-3 {
   top: 0; left: 0;
   width: 0%; height: 3px;
   background: #ffdf00;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   transition: width 0.4s ease;
 }
 
@@ -1243,12 +1244,12 @@ h1.display-3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12px;
 }
 
 .profile-icon i {
   font-size: 4rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(65, 65, 65, 0.541);
   transition: all 0.4s ease;
 }
 
@@ -1258,36 +1259,37 @@ h1.display-3 {
 }
 
 .icon-circle {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: rgba(180, 200, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   border: 3px solid transparent;
 }
 
 .icon-circle i {
-  font-size: 45px;
+  font-size: 44px;
   color: #a0a0a0;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .card-test.active .icon-circle {
-  background: rgba(60, 100, 255, 0.2);
-  border: 3px solid #ffdf00;
-  box-shadow: 0 0 10px rgba(255, 223, 0, 0.4);
+  background: rgba(255,208,0,0.28);
+  border-color: #ffdf00;
+  box-shadow: 0 0 14px rgba(255,223,0,0.4);
 }
 
 .card-test.active .icon-circle i {
-  color: #b0d0ff;
+  color: #4453db;
+  text-shadow: 0 0 10px rgba(255,223,0,0.8);
 }
 
 .stars {
   color: #ffdf00;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
   letter-spacing: 3px;
 }
@@ -1295,63 +1297,59 @@ h1.display-3 {
 .card-content p {
   font-style: italic;
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-  color: rgba(255, 255, 255, 0, 0.9);
+  opacity: 0.85;
+  margin-bottom: 1rem;
 }
 
 .card-content h3 {
-  font-weight: 700;
+  margin-top: 0.8rem;
   font-size: 1.05rem;
-  margin-bottom: 0.2rem;
+  font-weight: bold;
 }
 
 .card-content span {
   font-size: 0.85rem;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .pagination-test {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
   gap: 10px;
+  margin-top: 2rem;
 }
 
 .pagination-test .dot {
   width: 10px;
   height: 10px;
-  background: #cccccc;
+  background: #999;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .pagination-test .dot.active {
-  background: #6b6a6d81;
+  background: #ffdf00;
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffdd0018;
-  font-size: 1.8rem;
+  background: rgba(255,255,255,0.1);
   border: none;
-  border-radius: 50%;
+  font-size: 1.8rem;
   width: 45px;
   height: 45px;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
+  border-radius: 50%;
+color: #ccc;
+cursor: pointer;
+transition: 0.3s;
+z-index: 10;
 }
 
 .nav-btn:hover {
-  background: rgba(143, 143, 143, 0.096);
+  background: rgba(255,255,255,0.2);
 }
 
 .nav-btn.prev {
