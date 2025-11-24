@@ -142,48 +142,113 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".card-test");
-  const dots = document.querySelectorAll(".pagination-test .dot");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  let current = 0;
-  const visibleCards = 3;
+  const track = document.querySelector(".slider-track");
+  const cards = Array.from(document.querySelectorAll(".card-test"));
+  const prevBtn = document.querySelector(".nav-btn.prev");
+  const nextBtn = document.querySelector(".nav-btn.next");
+  const dots = Array.from(document.querySelectorAll(".pagination-test .dot"));
+  const viewport = document.querySelector(".viewport");
 
-  function updateSlider(index) {
-    const track = document.querySelector(".slider-track");
-    const offset = -index * (100 / visibleCards);
-    track.style.transform = `translateX(${offset}%)`;
+  if (!track || !cards.length) return;
 
-    cards.forEach((card, i) => {
-      card.classList.toggle("active", i === index + 1);
-    });
+  let currentIndex = 1; 
+  const visible = 3;
+  let autoplayTimer = null;
+  const autoplayDelay = 5000;
 
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
+  function computeStep() {
+    const cardRect = cards[0].getBoundingClientRect();
+    const left0 = cards[0].getBoundingClientRect().left;
+    const left1 = cards[1] ? cards[1].getBoundingClientRect().left : left0 + cardRect.width;
+    const gap = Math.round(left1 - left0 - cardRect.width);
+    return { step: cardRect.width + (gap || 18), cardWidth: cardRect.width };
   }
 
-  prevBtn.addEventListener("click", () => {
-    current = (current - 1 + cards.length) % cards.length;
-    updateSlider(current);
-  });
+  function setActiveClasses(index) {
+    cards.forEach((c, i) => {
+      c.classList.toggle("active", i === index);
+      if (i === index) {
+        c.style.opacity = "1";
+      } else if (Math.abs(i - index) === 1 || Math.abs(i - index) === cards.length - 1) {
+        c.style.opacity = "0.76";
+      } else {
+        c.style.opacity = "0.62";
+      }
+    });
 
-  nextBtn.addEventListener("click", () => {
-    current = (current + 1) % cards.length;
-    updateSlider(current);
-  });
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function updateTrack(index, animate = true) {
+    const { step } = computeStep();
+    const middlePos = Math.floor(visible / 2);
+    const offset = (index - middlePos) * step;
+    track.style.transition = animate ? "transform 600ms cubic-bezier(.2,.9,.3,1)" : "none";
+    track.style.transform = `translateX(-${offset}px)`;
+    setActiveClasses(index);
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    updateTrack(currentIndex);
+    restartAutoplay();
+  }
+
+  function next() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateTrack(currentIndex);
+    restartAutoplay();
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", prev);
+  if (nextBtn) nextBtn.addEventListener("click", next);
 
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-      current = i;
-      updateSlider(current);
+      currentIndex = i;
+      updateTrack(currentIndex);
+      restartAutoplay();
     });
   });
 
-  setInterval(() => {
-    current = (current + 1) % cards.length;
-    updateSlider(current);
-  }, 6000);
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => {
+      next();
+    }, autoplayDelay);
+  }
 
-  updateSlider(current);
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => updateTrack(currentIndex, false), 120);
+  });
+
+  function init() {
+    if (cards.length < visible) {
+      currentIndex = 0;
+    } else {
+      currentIndex = currentIndex % cards.length;
+    }
+    setTimeout(() => updateTrack(currentIndex, false), 50);
+    startAutoplay();
+  }
+
+  viewport.addEventListener("mouseenter", stopAutoplay);
+  viewport.addEventListener("mouseleave", startAutoplay);
+
+  init();
 });
+
