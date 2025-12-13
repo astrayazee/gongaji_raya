@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Ngaji Landing Page | Project Raya</title>
+    <title>go ngaji landing page | Project Raya</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,56 +11,57 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-            <div class="logo">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img id="navbar-logo" src="assets/icons/gongaji-white.svg" alt="Go Ngaji Logo">
-                </a>
-            </div>
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+      
+      <a class="navbar-brand d-flex align-items-center logo" href="#">
+        <img id="navbar-logo" src="assets/icons/gongaji-white.svg" alt="Go Ngaji Logo">
+      </a>
 
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <button class="bar" id="hamburger" aria-label="Menu">
+        <i class="fa-sharp fa-solid fa-bars"></i> 
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Tentang Aplikasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Fitur</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-capitalize" href="#">Subscription</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="#" target="_blank">Kemitraan</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link text-capitalize" href="#" target="_blank">Daftar Mitra</a>
-                    </li>
-                </ul>
-                <div>
-                    <a class="btn btn-claim btn-hover-secondary text-capitalize" href="">Claim Voucher</a>
-                </div>
-            </div>
-        </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#">Tentang Aplikasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#">Fitur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#">Subscription</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#" target="_blank">Kemitraan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="#" target="_blank">Daftar Mitra</a>
+          </li>
+        </ul>
+
+        <div>
+          <a class="btn btn-claim btn-hover-secondary text-capitalize" href="">Claim Voucher</a>
+        </div>
+      </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-    <div class="menu-header">
+  </nav>
+    
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header d-flex align-items-center justify-content-between">
       <img src="https://gongaji.id/assets/images/gongaji-coloured.svg" alt="Go Ngaji Logo" class="menu-logo">
+      
       <div class="close-btn" id="closeBtn">
         <i class="fa-solid fa-xmark"></i>
       </div>
     </div>
 
     <p class="menu-title">MENU</p>
+
     <ul>
       <li><a href="#"><i class="fa-solid fa-house"></i> Beranda</a></li>
       <li><a href="#"><i class="fa-solid fa-comments"></i> Tentang Aplikasi</a></li>
@@ -70,734 +71,884 @@
       <li><a href="#"><i class="fa-solid fa-user-group"></i> Daftar Mitra</a></li>
     </ul>
   </div>
-<section class="hero-section">
+
+  <section class="hero-section position-relative">
     <video autoplay muted loop playsinline class="video-hero">
         <source src="images/198048-906522343_large.mp4" type="video/mp4">
     </video>
     <div class="overlay"></div>
 
+    <div class="container h-100 position-relative">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 text-center">
+
+          <h1 class="display-3 fw-bold mb-4">
+            Islam Made Easy, Just for You.
+          </h1>
+          <p class="fs-4 mb-5">
+            Go Ngaji Sahabat Perjalanan Al-Qur'an-mu
+          </p>
+          <div class="download-buttons d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#" target="_blank" class="store-button">
+              <span class="d-inline-block me-2">
+                <img src="assets/icons/App-Store.svg" alt="Download on App Store" style="height: 50px;">
+              </span>
+            </a>
+            <a href="#" target="_blank" class="store-button">
+              <span class="d-inline-block me-2">
+                <img src="assets/icons/Play-Store.svg" alt="Download on Play Store" style="height: 50px;">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tentang-section position-relative">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="display-3 fw-bold mb-4">
-                    Islam Made Easy, Just for You.
-                </h1>
-                <p class="fs-4 mb-5">
-                    Go Ngaji Sahabat Perjalanan Al-Qur'an-mu
-                </p>
-                <div class="download-buttons">
-                    <a href="#" target="_blank"
-                        class="store-button">
-                    <span class="d-inline-block me-2">
-                        <img src="assets/icons/App-Store.svg" alt="Download on App Store"
-                            style="height: 50px;">
-                    </span>
-                    </a>
-                    <a href="#" target="_blank"
-                        class="store-button">
-                        <span class="d-inline-block me-2">
-                            <img src="assets/icons/Play-Store.svg" alt="Download on Play Store"
-                            style="height: 50px;">
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="tentang-section">
-    <div class="container-tentang">
-        <div class="intro-text-tentang">
+      <div class="row mb-5">
+        <div class="col-lg-5">
+          <div class="intro-text-tentang">
             <span class="label-go">TENTANG APLIKASI</span>
-            <h2>Solusi Cerdas Belajar Qur'an?<br><span class="highlight">Go Ngaji</span> Jawabannya!</h2>
+            <h2>Solusi Cerdas Belajar Qur'an?
+              <br><span class="highlight">Go Ngaji</span> Jawabannya!
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="icon">
+              <img src="images/go-hafalan.png" alt="Go Hafalan">
+            </div>
+            <h4>01</h4>
+            <h3>Apa itu Go Ngaji?</h3>
+            <p>Platform digital Islami yang dirancang untuk membantu umat Muslim belajar, menghafal, dan memahami Al-Qur'an serta ajaran Islam dengan cara yang lebih modern dan menyenangkan.</p>
+          </div>
         </div>
 
-        <div class="cards">
-            <div class="card">
-                <div class="icon">
-                    <img src="images/go-hafalan.png" alt="">
-                </div>
-                <h4>01</h4>
-                <h3>Apa itu Go Ngaji?</h3>
-                <p>Platform digital Islami yang dirancang untuk membantu umat Muslim belajar, menghafal, dan memahami Al-Qur'an serta ajaran Islam dengan cara yang lebih modern dan menyenangkan.</p>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="icon">
+              <img src="images/go-learn.png" alt="Go Learn">
+            </div>
+            <h4>02</h4>
+            <h3>Misi Kami</h3>
+            <p>Menghadirkan solusi pembelajaran Islam berbasis teknologi, yang mudah diakses oleh semua kalangan, serta mendukung proses ngaji, tilawah, dan pembinaan iman secara berkelanjutan.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="icon">
+              <img src="images/tebar-mushaf.png" alt="Tebar Mushaf">
+            </div>
+            <h4>03</h4>
+            <h3>Untuk Siapa?</h3>
+            <p>Go Ngaji cocok untuk anak-anak, remaja, orang tua, guru ngaji, hingga lembaga pendidikan yang ingin menjadikan aktivitas ngaji lebih interaktif dan relevan di era digital.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="parallax position-relative">
+    <div class="parallax-overlay">
+      <div class="container">
+        <div class="row justify-content-center">
+  
+          <div class="col-12 text-left">
+
+            <div class="intro-text">
+              <span class="label">VIRTUAL REALITY</span>
+              <h2>
+                Rasakan Pengalaman Virtual Reality<br>
+                Manasik Haji dan Umrah<br>
+                <span class="highlight-vr">Go Ngaji</span>
+              </h2>
             </div>
 
-            <div class="card">
-                <div class="icon">
-                    <img src="images/go-learn.png" alt="">
-                </div>
-                <h4>02</h4>
-                <h3>Misi Kami</h3>
-                <p>Menghadirkan solusi pembelajaran Islam berbasis teknologi, yang mudah diakses oleh semua kalangan, serta mendukung proses ngaji, tilawah, dan pembinaan iman secara berkelanjutan.</p>
+            <div class="vr-center">
+              <div class="icon-vr">
+                <i class="fa-solid fa-vr-cardboard" alt="Virtual Reality"></i>
+              </div>
+
+              <p>
+                Rasakan pengalaman manasik Haji dan Umrah yang lebih mendalam melalui teknologi Virtual Reality.
+                <br>Nikmati setiap rukun ibadah secara interaktif, edukatif, dan mempersiapkan diri Anda sebelum
+                <br>berangkat ke Tanah Suci. Lebih siap, lebih percaya diri.
+              </p>
             </div>
 
-            <div class="card">
-                <div class="icon">
-                    <img src="images/tebar-mushaf.png" alt="">
+            <div class="col-12">
+              <div class="features-grid d-grid gap-4">
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fa-solid fa-kaaba"></i></div>
+                  <h3>Manasik Ihram</h3>
                 </div>
-                <h4>03</h4>
-                <h3>Untuk Siapa?</h3>
-                <p>Go Ngaji cocok untuk anak-anak, remaja, orang tua, guru ngaji, hingga lembaga pendidikan yang ingin menjadikan aktivitas ngaji lebih interaktif dan relevan di era digital.</p>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-mosque"></i></div>
+                  <h3>Wukuf di Arafah</h3>
+                </div>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-bed"></i></div>
+                  <h3>Mabit di Muzdalifah</h3>
+                </div>
+
+                <div class="feature-box"> 
+                  <div class="icon-vr"><i class="fas fa-people-arrows"></i></div>
+                  <h3>Lempar Jumrah</h3>
+                </div>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-rotate-left"></i></div>
+                  <h3>Tawaf</h3>
+                </div>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-person-walking"></i></div>
+                  <h3>Sa'i</h3>
+                </div>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-scissors"></i></div>
+                  <h3>Tahalul</h3>
+                </div>
+
+                <div class="feature-box">
+                  <div class="icon-vr"><i class="fas fa-chalkboard-user"></i></div>
+                  <h3>Pembelajaran Praktis</h3>
+                </div>
+
+              </div>
+
+              <div class="text-center mt-5">
+                <a href="#" class="btn-simulasi center">
+                  <i class="fa-solid fa-vr-cardboard"></i> MULAI SIMULASI
+                </a>
+              </div>
+
             </div>
-        </div>
-    </div>
-</section>
 
-<section class="parallax">
-  <div class="parallax-overlay">
-    <div class="container-vr">
-      <div class="intro-text">
-        <span class="label">VIRTUAL REALITY</span>
-        <h2>
-          Rasakan Pengalaman Virtual Reality<br>
-          Manasik Haji dan Umrah<br>
-          <span class="highlight-vr">Go Ngaji</span>
-        </h2>
+          </div>
+        </div>
       </div>
-
-      <div class="vr-center">
-        <div class="icon-vr">
-          <i class="fa-solid fa-vr-cardboard" alt="Virtual Reality"></i>
-        </div>
-
-        <p>
-          Rasakan pengalaman manasik Haji dan Umrah yang lebih mendalam melalui teknologi Virtual Reality.
-          <br>Nikmati setiap rukun ibadah secara interaktif, edukatif, dan mempersiapkan diri Anda sebelum
-          <br>berangkat ke Tanah Suci. Lebih siap, lebih percaya diri.
-        </p>
-
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fa-solid fa-kaaba"></i></div>
-          <h3>Manasik Ihram</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-mosque"></i></div>
-          <h3>Wukuf di Arafah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-bed"></i></div>
-          <h3>Mabit di Muzdalifah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-people-arrows"></i></div>
-          <h3>Lempar Jumrah</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-rotate-left"></i></div>
-          <h3>Tawaf</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-person-walking"></i></div>
-          <h3>Sa'i</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-scissors"></i></div>
-          <h3>Tahalul</h3>
-        </div>
-        <div class="feature-box">
-          <div class="icon-vr"><i class="fas fa-chalkboard-user"></i></div>
-          <h3>Pembelajaran Praktis</h3>
-        </div>
     </div>
 
-    <a href="#" class="btn-simulasi center">
-        <i class="fa-solid fa-vr-cardboard"></i> MULAI SIMULASI
-    </a>
+    <div id="particles"></div>
+  </section>
+
+  <section class="parallax-tm position-relative">
+    <div class="parallax-overlay-tm">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+
+          <div class="col-lg-7">
+            <div class="intro-text-tm">
+              <span class="label">TEBAR MUSHAF</span>
+              <h2>
+                Tebar Mushaf
+                <span class="highlight-tm">Al-Qur'an</span>
+                <br>Untuk Kebaikan Umat
+              </h2>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-lg-end">
+            <a href="#" class="btn-donasi">
+              <i class="fa-solid fa-book-quran"></i> DONASI SEKARANG
+            </a>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div id="particles"></div>
-</section>
-
-<section class="parallax-tm">
-  <div class="parallax-overlay-tm">
-    <div class="container-tm">
-      <div class="intro-text-tm">
-        <span class="label">TEBAR MUSHAF</span>
-        <h2>
-          Tebar Mushaf
-          <span class="highlight-tm">Al-Qur'an</span>
-          <br>Untuk Kebaikan Umat
-        </h2>
-      </div>
-
-      <a href="#" class="btn-donasi">
-        <i class="fa-solid fa-book-quran"></i> DONASI<br>SEKARANG
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="fitur-section">
-  <div class="container-fitur">
-    <div class="intro-text-fitur">
-      <span class="label-go">FITUR</span>
-      <h2>Jelajahi Fitur-Fitur<br>Keunggulan <span class="highlight">Kami.</span></h2>
-    </div>
+  <section class="fitur-section py-5">
+    <div class="container">
 
-    <div class="fitur-slider">
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-1.webp" alt="Home Screen">
-        <div class="fitur-text">
-          <span class="label-go">HOME SCREEN</span>
-          <h3>Selamat Datang di<br>Go Ngaji</h3>
-          <p>Temukan pengalaman belajar Al-Qur'an yang lebih personal dan interaktif dengan tampilan home screen yang intuitif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke fitur favorit Anda</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat jadwal ibadah harian</li>
-          </ul>
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <div class="intro-text-fitur">
+            <span class="label-go">FITUR</span>
+            <h2>Jelajahi Fitur-Fitur<br>Keunggulan <span class="highlight">Kami.</span></h2>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-2.webp" alt="Home Navigation">
-        <div class="fitur-text">
-          <span class="label-go">HOME NAVIGATION</span>
-          <h3>Navigasi Pintar</h3>
-          <p>Jelajahi semua fitur GoNgaji dengan mudah melalui navigasi yang dirancang untuk kenyamanan Anda.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Menu yang mudah diakses</li>
-            <li><i class="fa-solid fa-circle-check"></i> Navigasi cepat ke fitur utama</li>
-          </ul>
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-1.webp" alt="Home Screen">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">HOME SCREEN</span>
+            <h3>Selamat Datang di<br>Go Ngaji</h3>
+            <p>Temukan pengalaman belajar Al-Qur'an yang lebih personal dan interaktif dengan tampilan home screen yang intuitif.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke fitur favorit Anda</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pengingat jadwal ibadah harian</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-3.webp" alt="QR Reader Buku - Content">
-        <div class="fitur-text">
-          <span class="label-go">QR READER BUKU - CONTENT</span>
-          <h3>Konten Digital Interaktif</h3>
-          <p>Buka dunia pembelajaran baru dengan memindai QR code pada buku fisik Anda untuk mengakses konten digital eksklusif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses konten multimedia eksklusif</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pembelajaran interaktif yang menyenangkan</li>
-          </ul>
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-2.webp" alt="Home Navigation">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">HOME NAVIGATION</span>
+            <h3>Navigasi Pintar</h3>
+            <p>Jelajahi semua fitur GoNgaji dengan mudah melalui navigasi yang dirancang untuk kenyamanan Anda.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Menu yang mudah diakses</li>
+              <li><i class="fa-solid fa-circle-check"></i> Navigasi cepat ke fitur utama</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-3.webp" alt="QR Reader Buku - Content">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">QR READER BUKU - CONTENT</span>
+            <h3>Konten Digital Interaktif</h3>
+            <p>Buka dunia pembelajaran baru dengan memindai QR code pada buku fisik Anda untuk mengakses konten digital eksklusif.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Akses konten multimedia eksklusif</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pembelajaran interaktif yang menyenangkan</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-4.webp" alt="Mushaf Hafalan">
-        <div class="fitur-text">
-          <span class="label-go">MUSHAF HAFALAN</span>
-          <h3>Hafalan Al-Qur'an<br>Digital</h3>
-          <p>Tingkatkan hafalan Al-Qur'an Anda dengan fitur khusus yang dirancang untuk memudahkan proses menghafal.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Mode hafalan dengan pengulangan otomatis</li>
-            <li><i class="fa-solid fa-circle-check"></i> Tracking progress hafalan harian</li>
-          </ul>
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-4.webp" alt="Mushaf Hafalan">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">MUSHAF HAFALAN</span>
+            <h3>Hafalan Al-Qur'an<br>Digital</h3>
+            <p>Tingkatkan hafalan Al-Qur'an Anda dengan fitur khusus yang dirancang untuk memudahkan proses menghafal.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Mode hafalan dengan pengulangan otomatis</li>
+              <li><i class="fa-solid fa-circle-check"></i> Tracking progress hafalan harian</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-5.webp" alt="Mushaf Tilawah">
-        <div class="fitur-text">
-          <span class="label-go">MUSHAF TILAWAH</span>
-          <h3>Baca Al-Qur'an dengan<br>Nyaman</h3>
-          <p>Nikmati pengalaman membaca Al-Qur'an yang lebih baik dengan berbagai pilihan mushaf dan fitur pendukung.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Berbagai varian mushaf populer</li>
-            <li><i class="fa-solid fa-circle-check"></i> Audio murottal berkualitas tinggi</li>
-          </ul>
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-5.webp" alt="Mushaf Tilawah">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">MUSHAF TILAWAH</span>
+            <h3>Baca Al-Qur'an dengan<br>Nyaman</h3>
+            <p>Nikmati pengalaman membaca Al-Qur'an yang lebih baik dengan berbagai pilihan mushaf dan fitur pendukung.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Berbagai varian mushaf populer</li>
+              <li><i class="fa-solid fa-circle-check"></i> Audio murottal berkualitas tinggi</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-6.webp" alt="Dzikir">
-        <div class="fitur-text">
-          <span class="label-go">DZIKIR</span>
-          <h3>Dzikir Harian</h3>
-          <p>Jadikan dzikir sebagai kebiasaan harian dengan panduan lengkap dan pengingat yang tepat waktu.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Koleksi dzikir pagi dan petang</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat dzikir otomatis</li>
-          </ul>
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-6.webp" alt="Dzikir">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">DZIKIR</span>
+            <h3>Dzikir Harian</h3>
+            <p>Jadikan dzikir sebagai kebiasaan harian dengan panduan lengkap dan pengingat yang tepat waktu.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Koleksi dzikir pagi dan petang</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pengingat dzikir otomatis</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-7.webp" alt="Belajar Ngaji">
-        <div class="fitur-text">
-          <span class="label-go">BELAJAR NGAJI</span>
-          <h3>Belajar Bersama Ustadz</h3>
-          <p class="desk-singkat">
-            Belajar Ngaji adalah ruang belajar Islam yang interaktif dan menyenangkan,
-            bersama ustadz dan ustadzah yang berpengalaman. Mulai dari tahsin, tilawah,
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-7.webp" alt="Belajar Ngaji">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">BELAJAR NGAJI</span>
+            <h3>Belajar Bersama Ustadz</h3>
+            <p class="desk-singkat">
+              Belajar Ngaji adalah ruang belajar Islam yang interaktif dan menyenangkan,
+              bersama ustadz dan ustadzah yang berpengalaman. Mulai dari tahsin, tilawah,
             <a href="#" class="lihat-link">Lihat Selengkapnya</a>
-          </p>
-          <p class="desk-lengkap">
-            hafalan Iqro, hingga pemahaman dasar-dasar agama Islam—semua bisa diakses
-            secara online maupun offline di kota Anda.
-          </p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Materi lengkap: tahsin, tahfidz, tilawah, hafalan, dan lainnya</li>
-            <li><i class="fa-solid fa-circle-check"></i> Didampingi langsung oleh ustadz dan ustadzah kompeten</li>
-          </ul>
+            </p>
+            <p class="desk-lengkap">
+              hafalan Iqro, hingga pemahaman dasar-dasar agama Islam—semua bisa diakses
+              secara online maupun offline di kota Anda.
+            </p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Materi lengkap: tahsin, tahfidz, tilawah, hafalan, dan lainnya</li>
+              <li><i class="fa-solid fa-circle-check"></i> Didampingi langsung oleh ustadz dan ustadzah kompeten</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-8.webp" alt="Go Library">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">GO LIBRARY</span>
+            <h3>Perpustakaan Digital<br>Islam</h3>
+            <p>Akses ribuan buku Islam dalam genggaman Anda dengan fitur pencarian dan bookmark yang canggih.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Koleksi buku Islam terlengkap</li>
+              <li><i class="fa-solid fa-circle-check"></i> Baca offline dan sinkronisasi otomatis</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-8.webp" alt="Go Library">
-        <div class="fitur-text">
-          <span class="label-go">GO LIBRARY</span>
-          <h3>Perpustakaan Digital<br>Islam</h3>
-          <p>Akses ribuan buku Islam dalam genggaman Anda dengan fitur pencarian dan bookmark yang canggih.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Koleksi buku Islam terlengkap</li>
-            <li><i class="fa-solid fa-circle-check"></i> Baca offline dan sinkronisasi otomatis</li>
-          </ul>
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-9.webp" alt="QR Reader Qur'an">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">QR READER QUR'AN</span>
+            <h3>Akses Cepat ke<br>Al-Qur'an</h3>
+            <p>Pindai QR code pada mushaf fisik Anda untuk langsung mengakses konten digital terkait.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke surah dan ayat</li>
+              <li><i class="fa-solid fa-circle-check"></i> Tafsir dan terjemahan instan</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-9.webp" alt="QR Reader Qur'an">
-        <div class="fitur-text">
-          <span class="label-go">QR READER QUR'AN</span>
-          <h3>Akses Cepat ke<br>Al-Qur'an</h3>
-          <p>Pindai QR code pada mushaf fisik Anda untuk langsung mengakses konten digital terkait.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Akses cepat ke surah dan ayat</li>
-            <li><i class="fa-solid fa-circle-check"></i> Tafsir dan terjemahan instan</li>
-          </ul>
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-10.webp" alt="QR Reader Buku">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">QR READER BUKU</span>
+            <h3>Konten Digital Eksklusif</h3>
+            <p>Buka akses ke konten digital eksklusif dengan memindai QR code pada buku fisik Anda.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Konten multimedia interaktif</li>
+              <li><i class="fa-solid fa-circle-check"></i> Materi tambahan dan latihan</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-10.webp" alt="QR Reader Buku">
-        <div class="fitur-text">
-          <span class="label-go">QR READER BUKU</span>
-          <h3>Konten Digital Eksklusif</h3>
-          <p>Buka akses ke konten digital eksklusif dengan memindai QR code pada buku fisik Anda.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Konten multimedia interaktif</li>
-            <li><i class="fa-solid fa-circle-check"></i> Materi tambahan dan latihan</li>
-          </ul>
+      <div class="row align-items-center card-fitur kanan g-4 mb-5">
+        <div class="col-lg-5 text-center">
+          <img src="images/Iphone-11.webp" alt="Virtual Reality">
+        </div>
+        <div class="col-lg-7">
+          <div class="fitur-text">
+            <span class="label-go">VIRTUAL REALITY</span>
+            <h3>Pengalaman Haji &<br>Umrah Virtual</h3>
+            <p>Jelajahi pengalaman haji dan umrah secara virtual dengan teknologi VR yang imersif.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Simulasi manasik haji dan umrah</li>
+              <li><i class="fa-solid fa-circle-check"></i> Panduan visual interaktif</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kanan">
-        <img src="images/Iphone-11.webp" alt="Virtual Reality">
-        <div class="fitur-text">
-          <span class="label-go">VIRTUAL REALITY</span>
-          <h3>Pengalaman Haji &<br>Umrah Virtual</h3>
-          <p>Jelajahi pengalaman haji dan umrah secara virtual dengan teknologi VR yang imersif.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Simulasi manasik haji dan umrah</li>
-            <li><i class="fa-solid fa-circle-check"></i> Panduan visual interaktif</li>
-          </ul>
+      <div class="row align-items-center card-fitur kiri g-4 mb-5">
+        <div class="col-lg-5 order-lg-5 text-center">
+          <img src="images/Iphone-12.webp" alt="Digital Assistant">
+        </div>
+        <div class="col-lg-7 order-lg-1">
+          <div class="fitur-text">
+            <span class="label-go">DIGITAL ASSISTANT</span>
+            <h3>Asisten Digital Islami</h3>
+            <p>Dapatkan bantuan dan informasi Islami kapan saja dengan asisten digital yang cerdas.</p>
+            <ul class="fitur-list">
+              <li><i class="fa-solid fa-circle-check"></i> Jawaban cepat untuk pertanyaan Islami</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pengingat ibadah dan jadwal</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="card-fitur kiri">
-        <img src="images/Iphone-12.webp" alt="Digital Assistant">
-        <div class="fitur-text">
-          <span class="label-go">DIGITAL ASSISTANT</span>
-          <h3>Asisten Digital Islami</h3>
-          <p>Dapatkan bantuan dan informasi Islami kapan saja dengan asisten digital yang cerdas.</p>
-          <ul class="fitur-list">
-            <li><i class="fa-solid fa-circle-check"></i> Jawaban cepat untuk pertanyaan Islami</li>
-            <li><i class="fa-solid fa-circle-check"></i> Pengingat ibadah dan jadwal</li>
-          </ul>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-4">
+          <div class="fitur-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
         </div>
-      </div>
-
-      <div class="fitur-pagination">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="subscription-section">
-  <div class="container-subscription">
-    <div class="intro-text-subscription">
-      <span class="label">SUBSCRIPTION</span>
-      <h2>Bagaimana informasi subscription di<br>Go Ngaji?</h2>
-      <p>Pilih paket yang sesuai dengan kebutuhan belajar Anda</p>
+  <section class="subscription-section py-5">
+    <div class="container">
 
-      <div class="toggle-subscription">
-        <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
-        <button class="toggle-btn" id="yearlyBtn">Yearly</button>
-      </div>
-    </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center-mb-5">
+          <div class="intro-text-subscription">
+            <span class="label">SUBSCRIPTION</span>
+            <h2>Bagaimana informasi subscription di<br>Go Ngaji?</h2>
+            <p>Pilih paket yang sesuai dengan kebutuhan belajar Anda</p>
 
-    <div class="subscription-cards">
-      <div class="card-subscription free">
-        <span class="label-card">CLAIM VOUCHER</span>
-        <p class="rp">Rp</p>
-        <h3 class="price">Gratis</h3>
-        <span class="label">1 Tahun</span>
-        <p class="desc">
-          Akses eksklusif khusus pemilik Mushaf Syaamil Qur'an premium!
-        </p>
-        <ul>
-          <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-          <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-          <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-        </ul>
-        <button class="btn-warning">CLAIM VOUCHER</button>
-      </div>
-
-      <div class="card-subscription premium">
-        <div class="popular">Most Popular</div>
-          <span class="label-card-premium">PREMIUM</span>
-          <p class="rp">RP</p>
-          <h3 class="price-premium" id="premiumPrice">49.900</h3>
-          <span class="label-premium">MONTHLY</span>
-          <p class="desc-premium" id="premiumDesc">
-            Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal
-          </p>
-          <ul>
-            <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-            <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-            <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-          </ul>
-          <button class="btn-warning">UPGRADE PREMIUM!</button>
-      </div>
-
-      <div class="card-subscription free">
-        <span class="label-card">CLAIM VOUCHER</span>
-        <p class="rp">Rp</p>
-        <h3 class="price">Gratis</h3>
-        <span class="label">3 Bulan</span>
-        <p class="desc">
-          Gunakan Mushaf Syaamil Haji & Umrah untuk membuka semua fitur!
-        </p>
-        <ul>
-          <li><i class="far fa-circle-check"></i> Akses semua fitur Premium</li>
-          <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
-          <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
-          <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
-          <li><i class="far fa-circle-check"></i> Akses Virtual Reality Haji & Umrah Selamanya</li>
-        </ul>
-        <button class="btn-warning">CLAIM VOUCHER</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="parallax-test">
-  <div class="parallax-overlay-test">
-    <div class="container-test">
-      <div class="intro-text-test">
-        <span class="label">TESTIMONI</span>
-        <h2>
-          Apa kata Mereka 
-          <br>Tentang <span class="highlight-test">Go Ngaji</span>
-        </h2>
-      </div>
-
-      <div class="fitur-slider">
-        <button class="nav-btn prev" aria-label="Previous">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-
-        <div class="viewport">
-          <div class="slider-track">
-
-            <div class="card-test">
-              <div class="card-top-line"></div>
-
-              <div class="card-main">
-                <div class="profile-icon">
-                  <div class="icon-circle">
-                    <i class="fas fa-circle-user"></i>
-                  </div>
-                </div>
-                <div class="rating">★★★★★</div>
-                <div class="card-content">
-                  <p>
-                    Masyaallah, alhamdulillah nemu aplikasi yang super duper lengkap,
-                    bukan cuma mushaf yang bisa buat tilawah, tapi juga sahabat dalam menghafal,
-                    belum fitur-fitur lainnya, bisa berbagi ayat dalam bentu gambar,
-                    ada perpustakaannya, ada pengingat waktu shalat yang akan muncul
-                    di layar hp dan pengingat untuk tilawah. Barakallahu fiik Sukses terus buat Syaamil Quran.
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="author">Ummu Rochimah</div>
-                <div class="position">Pengguna</div>
-              </div>      
-            </div>
-
-            <div class="card-test">
-              <div class="card-top-line"></div>
-
-              <div class="card-main">
-                <div class="profile-icon">
-                  <div class="icon-circle">
-                    <i class="fas fa-circle-user"></i>
-                  </div>
-                </div>
-                <div class="rating">★★★★★</div>
-                <div class="card-content">
-                  <p>
-                    Alhamdulillah aplikasi yang sangat bermanfaat
-                    untuk mempermudah hafalan Al Qur'an
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="author">Agus Mukti Alam</div>
-                <div class="position">Pengguna</div>
-              </div>
-            </div>
-
-            <div class="card-test">
-              <div class="card-top-line"></div>
-
-              <div class="card-main">
-                <div class="profile-icon">
-                  <div class="icon-circle">
-                    <i class="fas fa-circle-user"></i>
-                  </div>
-                </div>
-                <div class="rating">★★★★★</div>
-                <div class="card-content">
-                  <p>
-                    Sangat membantu dalam upaya kita selalu terkoneksi dgn al quran.
-                    Fitur2nya juga lumayan lengkap. Barakallah
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="author">Ahmad Abu Hasydan</div>
-                <div class="position">Pengguna</div>
-              </div>
-            </div>
-
-            <div class="card-test">
-              <div class="card-top-line"></div>
-
-              <div class="card-main">
-                <div class="profile-icon">
-                  <div class="icon-circle">
-                    <i class="fas fa-circle-user"></i>
-                  </div>
-                </div>
-                <div class="rating">★★★★★</div>
-                <div class="card-content">
-                  <p>
-                    Aplikasi yang sangat bagus, banyak ilmu didalamnya...
-                    Wajib download nih bagi semua muslim...
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="author">Atep Kurniawan</div>
-                <div class="position">Pengguna</div>
-              </div>
-            </div>
-
-            <div class="card-test">
-              <div class="card-top-line"></div>
-
-              <div class="card-main">
-                <div class="profile-icon">
-                  <div class="icon-circle">
-                    <i class="fas fa-circle-user"></i>
-                  </div>
-                </div>
-                <div class="rating">★★★★★</div>
-                <div class="card-content">
-                  <p>
-                    Masyaallah Tabarakallah, ada aplikasi sebagus dan sebaik ini.
-                    Insyaallah ini aplikasi sangat bermanfaat. Dari awal download
-                    dan log in bikin hati senang, tenang dan tentram.
-                    Biasanya saat loading ada keterangan loading atau himbauan untuk
-                    sabar menunggu. Di aplikasi ini beda banget, disarankan menunggu
-                    sambil berdzikir. Belum lagi kita bisa mencari kata apa saja yang                  kita inginkan, misal saya ketik kata kemudahan, disitu akan muncul
-                    semua ayat yang berkaitan dengan kemudahan. Keren pokoknya.
-                  </p>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="author">Linggar Agus</div>
-                <div class="position">Pengguna</div>
-              </div>
+            <div class="toggle-subscription mt-4">
+              <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
+              <button class="toggle-btn" id="yearlyBtn">Yearly</button>
             </div>
           </div>
         </div>
       </div>
 
-      <button class="nav-btn next">
-        <i class="fas fa-chevron-right"></i>
-      </button>
+      <div class="row justify-content-center g-4 subscription-cards">
 
-      <div class="pagination-test">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <div class="col-lg-4 col-md-6">
+          <div class="card-subscription free h-100">
+            <span class="label-card">CLAIM VOUCHER</span>
+            <p class="rp">Rp</p>
+            <h3 class="price">Gratis</h3>
+            <span class="label">1 Tahun</span>
+
+            <p class="desc">
+              Akses eksklusif khusus pemilik Mushaf Syaamil Qur'an premium!
+            </p>
+
+            <ul>
+              <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
+              <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
+              <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
+            </ul>
+
+            <button class="btn-warning">CLAIM VOUCHER</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card-subscription premium h-100">
+            <div class="popular">Most Popular</div>
+
+              <span class="label-card-premium">PREMIUM</span>
+              <p class="rp">RP</p>
+
+              <h3 class="price-premium" id="premiumPrice">49.900</h3>
+              <span class="label-premium">MONTHLY</span>
+
+              <p class="desc-premium" id="premiumDesc">
+                Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal
+              </p>
+
+              <ul>
+                <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
+                <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
+                <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
+              </ul>
+
+              <button class="btn-warning">UPGRADE PREMIUM!</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="card-subscription free h-100">
+            <span class="label-card">CLAIM VOUCHER</span>
+            <p class="rp">Rp</p>
+            <h3 class="price">Gratis</h3>
+            <span class="label">3 Bulan</span>
+
+            <p class="desc">
+              Gunakan Mushaf Syaamil Haji & Umrah untuk membuka semua fitur!
+            </p>
+            
+            <ul>
+              <li><i class="far fa-circle-check"></i> Akses semua fitur Premium</li>
+              <li><i class="far fa-circle-check"></i> Konten Islami eksklusif</li>
+              <li><i class="far fa-circle-check"></i> Akses premium ke fitur Qur'an Library</li>
+              <li><i class="far fa-circle-check"></i> Akses ke lebih dari 300+ buku</li>
+              <li><i class="far fa-circle-check"></i> Akses Virtual Reality Haji & Umrah Selamanya</li>
+            </ul>
+
+            <button class="btn-warning">CLAIM VOUCHER</button>
+          </div>
+        </div>
+        
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="parallax-test">
+    <div class="parallax-overlay-test">
+      <div class="container">
 
-<section class="faq-section">
-  <div class="container-faq">
-    <div class="intro-text-faq">
-      <span class="label">FAQ</span>
-      <h2>Pertanyaan yang Sering Diajukan</h2>
-      <p>Temukan jawaban untuk pertanyaan umum tentang Go Ngaji dan layanan pembelajaran Al-Qur'an digital kami</p>
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <div class="intro-text-test">
+              <span class="label">TESTIMONI</span>
+              <h2>
+                Apa kata Mereka 
+                <br>Tentang <span class="highlight-test">Go Ngaji</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10 position-relative">
+
+            <div class="fitur-slider">
+              <button class="nav-btn prev" aria-label="Previous">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+
+              <div class="viewport">
+                <div class="slider-track">
+
+                  <div class="card-test">
+                    <div class="card-top-line"></div>
+
+                    <div class="card-main">
+                      <div class="profile-icon">
+                        <div class="icon-circle">
+                          <i class="fas fa-circle-user"></i>
+                        </div>
+                      </div>
+                      <div class="rating">★★★★★</div>
+                      <div class="card-content">
+                        <p>
+                          Masyaallah, alhamdulillah nemu aplikasi yang super duper lengkap,
+                          bukan cuma mushaf yang bisa buat tilawah, tapi juga sahabat dalam menghafal,
+                          belum fitur-fitur lainnya, bisa berbagi ayat dalam bentu gambar,
+                          ada perpustakaannya, ada pengingat waktu shalat yang akan muncul
+                          di layar hp dan pengingat untuk tilawah. Barakallahu fiik Sukses terus buat Syaamil Quran.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="author">Ummu Rochimah</div>
+                      <div class="position">Pengguna</div>
+                    </div>      
+                  </div>
+
+                  <div class="card-test">
+                    <div class="card-top-line"></div>
+
+                    <div class="card-main">
+                      <div class="profile-icon">
+                        <div class="icon-circle">
+                          <i class="fas fa-circle-user"></i>
+                        </div>
+                      </div>
+                      <div class="rating">★★★★★</div>
+                      <div class="card-content">
+                        <p>
+                          Alhamdulillah aplikasi yang sangat bermanfaat
+                          untuk mempermudah hafalan Al Qur'an
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="author">Agus Mukti Alam</div>
+                      <div class="position">Pengguna</div>
+                    </div>
+                  </div>
+
+                  <div class="card-test">
+                    <div class="card-top-line"></div>
+
+                    <div class="card-main">
+                      <div class="profile-icon">
+                        <div class="icon-circle">
+                          <i class="fas fa-circle-user"></i>
+                        </div>
+                      </div>
+                      <div class="rating">★★★★★</div>
+                      <div class="card-content">
+                        <p>
+                          Sangat membantu dalam upaya kita selalu terkoneksi dgn al quran.
+                          Fitur2nya juga lumayan lengkap. Barakallah
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="author">Ahmad Abu Hasydan</div>
+                      <div class="position">Pengguna</div>
+                    </div>
+                  </div>
+
+                  <div class="card-test">
+                    <div class="card-top-line"></div>
+
+                    <div class="card-main">
+                      <div class="profile-icon">
+                        <div class="icon-circle">
+                          <i class="fas fa-circle-user"></i>
+                        </div>
+                      </div>
+                      <div class="rating">★★★★★</div>
+                      <div class="card-content">
+                        <p>
+                          Aplikasi yang sangat bagus, banyak ilmu didalamnya...
+                          Wajib download nih bagi semua muslim...
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="author">Atep Kurniawan</div>
+                      <div class="position">Pengguna</div>
+                    </div>
+                  </div>
+
+                  <div class="card-test">
+                    <div class="card-top-line"></div>
+
+                    <div class="card-main">
+                      <div class="profile-icon">
+                        <div class="icon-circle">
+                          <i class="fas fa-circle-user"></i>
+                        </div>
+                      </div>
+                      <div class="rating">★★★★★</div>
+                      <div class="card-content">
+                        <p>
+                          Masyaallah Tabarakallah, ada aplikasi sebagus dan sebaik ini.
+                          Insyaallah ini aplikasi sangat bermanfaat. Dari awal download
+                          dan log in bikin hati senang, tenang dan tentram.
+                          Biasanya saat loading ada keterangan loading atau himbauan untuk
+                          sabar menunggu. Di aplikasi ini beda banget, disarankan menunggu
+                          sambil berdzikir. Belum lagi kita bisa mencari kata apa saja yang
+                          kita inginkan, misal saya ketik kata kemudahan, disitu akan muncul
+                          semua ayat yang berkaitan dengan kemudahan. Keren pokoknya.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="author">Linggar Agus</div>
+                      <div class="position">Pengguna</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="nav-btn next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <div class="pagination-test">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="faq-list">
+
+  <section class="faq-section py-5">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <div class="intro-text-faq">
+            <span class="label">FAQ</span>
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <p>Temukan jawaban untuk pertanyaan umum tentang Go Ngaji dan layanan pembelajaran Al-Qur'an digital kami</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          
+          <div class="faq-list">
       
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          Cara claim premium QuLib untuk pengguna Mushaf Syaamil Qur'an?
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Ambil Mushaf Syaamil Qur'an, kemudian buka aplikasi Go Ngaji di hp Anda,
-          lalu buka menu "Subscription" dan pilih sesuai Mushaf Syaamil mana yang Anda punya,
-          lalu scan QR Code Mushaf Syaamil Qur'an Anda.
-        </div>
-      </div>
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                Cara claim premium QuLib untuk pengguna Mushaf Syaamil Qur'an?
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Ambil Mushaf Syaamil Qur'an, kemudian buka aplikasi Go Ngaji di hp Anda,
+                lalu buka menu "Subscription" dan pilih sesuai Mushaf Syaamil mana yang Anda punya,
+                lalu scan QR Code Mushaf Syaamil Qur'an Anda.
+              </div>
+            </div>
 
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          Ingin mengubah jadwal kelas Belajar Ngaji setelah pembayaran 
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Sayang sekali, jika Anda telah berhasil melakukan pembayaran pada sistem, maka jadwal kelas tidak dapat diubah.
-          Namun, Anda masih bisa menghubungi guru ngaji Anda untuk mengatur ulang jadwal kelas, dengan maksimal satu kali perubahan.
-        </div>
-      </div>
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                Ingin mengubah jadwal kelas Belajar Ngaji setelah pembayaran 
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Sayang sekali, jika Anda telah berhasil melakukan pembayaran pada sistem, maka jadwal kelas tidak dapat diubah.
+                Namun, Anda masih bisa menghubungi guru ngaji Anda untuk mengatur ulang jadwal kelas, dengan maksimal satu kali perubahan.
+              </div>
+            </div>
 
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          Tidak menerima notifikasi hasil penyaluran donasi Tebar Mushaf
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Laporan hasil penyaluran donasi Tebar Mushaf akan di update setiap akhir bulan.
-          Jika Anda tidak menerima notifikasi silahkan cek berkala pada aplikasi.
-        </div>
-      </div>
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                Tidak menerima notifikasi hasil penyaluran donasi Tebar Mushaf
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Laporan hasil penyaluran donasi Tebar Mushaf akan di update setiap akhir bulan.
+                Jika Anda tidak menerima notifikasi silahkan cek berkala pada aplikasi.
+              </div>
+            </div>
 
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          Cara membeli Premium Virtual Reality Haji dan Umrah
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Sayang sekali, fitur Virtual Reality Haji dan Umrah hanya bisa diakses oleh pengguna yang memiliki Mushaf Syaamil Haji dan Umrah.
-          Anda bisa membeli mushaf Syaamil Haji dan Umrah di toko terdekat atau melalui aplikasi eCommerce.
-        </div>
-      </div>
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                Cara membeli Premium Virtual Reality Haji dan Umrah
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Sayang sekali, fitur Virtual Reality Haji dan Umrah hanya bisa diakses oleh pengguna yang memiliki Mushaf Syaamil Haji dan Umrah.
+                Anda bisa membeli mushaf Syaamil Haji dan Umrah di toko terdekat atau melalui aplikasi eCommerce.
+              </div>
+            </div>
 
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          QR Reader tidak dapat digunakan
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Jika QR Reader tidak dapat digunakan, pastikan Anda sudah mengizinkan aplikasi Go Ngaji
-          untuk mengakses kamera pada dan pengaturan aplikasi pada perangkat Anda.
-        </div>
-      </div>
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                QR Reader tidak dapat digunakan
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Jika QR Reader tidak dapat digunakan, pastikan Anda sudah mengizinkan aplikasi Go Ngaji
+                untuk mengakses kamera pada dan pengaturan aplikasi pada perangkat Anda.
+              </div>
+            </div>
 
-      <div class="faq-item">
-        <button class="faq-pertanyaan">
-          Masih bingung?
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="faq-jawaban">
-          Tenang, tinggal gunakan fitur Go Ngaji digital assistant "MinGo" untuk menjawab pertanyaan Anda.
+            <div class="faq-item">
+              <button class="faq-pertanyaan w-100 d-flex justify-content-between align-items-center">
+                Masih bingung?
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <div class="faq-jawaban">
+                Tenang, tinggal gunakan fitur Go Ngaji digital assistant "MinGo" untuk menjawab pertanyaan Anda.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="footer-container">
+  <footer class="footer py-5">
+    <div class="container">
 
-    <div class="footer-col footer-brand">
-      <img src="assets/icons/gongaji-white.svg" alt="Go Ngaji" class="footer-logo">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 footer-col footer-brand">
+          <img src="assets/icons/gongaji-white.svg" alt="Go Ngaji" class="footer-logo">
 
-      <div class="footer-tagline">
-        <p>Sahabat Perjalanan Al-Quran.</p>
+          <div class="footer-tagline">
+            <p>Sahabat Perjalanan Al-Quran.</p>
+          </div>
+
+          <div class="footer-alamat">
+            <p>Jl. Babakan Sari 1 No. 71<br>
+            Kiaracondong Bandung 40283</p>
+          </div>
+
+          <div class="footer-phone">
+            <p>Telepon:
+              <span>+62 851-7993-8395</span>
+            </p>
+          </div>
       </div>
 
-      <div class="footer-alamat">
-        <p>Jl. Babakan Sari 1 No. 71<br>
-        Kiaracondong Bandung 40283</p>
+      <div class="col-lg-3 col-md-6 footer-col">
+        <h3>Media Sosial</h3>
+        <span class="garis-bawah"></span>
+
+        <ul class="footer-link list-unstyled">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i>  Instagram</a></li>
+          <li><a href="#"><i class="fa-brands fa-whatsapp"></i>  WhatsApp</a></li>
+        </ul>
       </div>
 
-      <div class="footer-phone">
-        <p>Telepon:
-          <span>+62 851-7993-8395</span>
-        </p>
+      <div class="col-lg-3 col-md-6 footer-col">
+        <h3>Informasi</h3>
+        <span class="garis-bawah"></span>
+
+        <ul class="footer-link list-unstyled">
+          <li><a href="#">Kantor Pusat</a></li>
+          <li><a href="#">Telepon</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 footer-col footer-subscribe">
+        <h3>Subscribe</h3>
+        <span class="garis-bawah"></span>
+
+        <div class="subscribe-text">
+          <p>Subscribe to get the latest news from us</p>
+        </div>
+
+        <div class="subscribe-box mb-3">
+          <input type="email" placeholder="Enter email address">
+        </div>
+
+        <button class="subscribe-btn w-100">Subscribe</button>
       </div>
     </div>
 
-    <div class="footer-col">
-      <h3>Media Sosial</h3>
-      <span class="garis-bawah"></span>
+    <hr class="footer-garis my-4">
 
-      <ul class="footer-link">
-        <li><a href="#"><i class="fa-brands fa-instagram"></i>  Instagram</a></li>
-        <li><a href="#"><i class="fa-brands fa-whatsapp"></i>  WhatsApp</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Informasi</h3>
-      <span class="garis-bawah"></span>
-
-      <ul class="footer-link">
-        <li><a href="#">Kantor Pusat</a></li>
-        <li><a href="#">Telepon</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col footer-subscribe">
-      <h3>Subscribe</h3>
-      <span class="garis-bawah"></span>
-
-      <div class="subscribe-text">
-        <p>Subscribe to get the latest news from us</p>
+    <div class="row">
+      <div class="col-12 text-center footer-copy">
+        <p>©2025 - All Rights Reserved by gongaji.id</p>
       </div>
-
-      <div class="subscribe-box">
-        <input type="email" placeholder="Enter email address">
-      </div>
-
-      <button class="subscribe-btn">Subscribe</button>
     </div>
-
-  </div>
-
-  <hr class="footer-garis">
-
-  <div class="footer-copy">
-    <p>©2025 - All Rights Reserved by gongaji.id</p>
-  </div>
-</footer>
+  </footer>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
+
