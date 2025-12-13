@@ -1,18 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("menuOverlay");
 
-  hamburger.addEventListener("click", () => {
+  function openMenu() {
     mobileMenu.classList.add("active");
-  });
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
 
-  closeBtn.addEventListener("click", () => {
+  function closeMenu() {
     mobileMenu.classList.remove("active");
-  });
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  hamburger?.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  overlay?.addEventListener("click", closeMenu);
 });
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
   const logo = document.getElementById("navbar-logo");
 
@@ -25,21 +34,36 @@ window.addEventListener("scroll", function () {
   }
 });
 
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  const logo = document.getElementById("navbar-logo");
+
+  if (!navbar || !logo) return;
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+    logo.src = "https://gongaji.id/assets/images/gongaji-coloured.svg";
+  } else {
+    navbar.classList.remove("scrolled");
+    logo.src = "assets/icons/gongaji-white.svg";
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const particleContainer = document.getElementById("particles");
-  const numParticles = 40; 
+  if (!particleContainer) return;
+
+  const numParticles = 40;
 
   for (let i = 0; i < numParticles; i++) {
     const particle = document.createElement("div");
     particle.classList.add("particle");
 
     particle.style.left = Math.random() * 100 + "vw";
-
-    const y = 20 + Math.random() * 60;
-    particle.style.top = y + "vh";
-
+    particle.style.top = (20 + Math.random() * 60) + "vh";
     particle.style.animationDelay = Math.random() * 5 + "s";
-    particle.style.animationDuration = 5 + Math.random() * 5 + "s";
+    particle.style.animationDuration = (5 + Math.random() * 5) + "s";
 
     const size = 2 + Math.random() * 4;
     particle.style.width = `${size}px`;
@@ -49,9 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".card-fitur");
   const dots = document.querySelectorAll(".fitur-pagination .dot");
+  if (!slides.length) return;
+
   let index = 0;
   const slideInterval = 10000;
 
@@ -84,41 +111,45 @@ document.addEventListener("DOMContentLoaded", () => {
   showSlide(index);
 });
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("lihat-link")) {
-    e.preventDefault();
-    const parent = e.target.closest(".fitur-text");
-    const deskLengkap = parent.querySelector(".desk-lengkap");
-    const btn = e.target;
 
-    deskLengkap.style.display = "inline";
-    btn.style.display = "none";
-  }
+document.querySelectorAll(".fitur-text .lihat-link").forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+
+    const fiturText = link.closest(".fitur-text");
+    fiturText.classList.toggle("is-open");
+
+    link.textContent = fiturText.classList.contains("is-open")
+      ? "Tutup"
+      : "Lihat Selengkapnya";
+  });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const monthlyBtn = document.getElementById("monthlyBtn");
   const yearlyBtn = document.getElementById("yearlyBtn");
-
   const premiumPrice = document.getElementById("premiumPrice");
   const premiumLabel = document.querySelector(".label-premium");
   const premiumDesc = document.getElementById("premiumDesc");
+  const toggleContainer = document.querySelector(".toggle-subscription");
+  const introText = document.querySelector(".intro-text-subscription");
+
+  if (!monthlyBtn || !yearlyBtn) return;
 
   const promoLabel = document.createElement("div");
   promoLabel.classList.add("promo-label");
   promoLabel.textContent = "Save Up To 15.5%";
 
-  const toggleContainer = document.querySelector(".toggle-subscription");
-  const introText = document.querySelector(".intro-text-subscription");
-
   function setMonthly() {
     premiumPrice.textContent = "49.900";
     premiumLabel.textContent = "MONTHLY";
     premiumDesc.textContent = "Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal";
+
     monthlyBtn.classList.add("active");
     yearlyBtn.classList.remove("active");
 
-    if (introText.contains(promoLabel)) {
+    if (introText?.contains(promoLabel)) {
       promoLabel.remove();
     }
   }
@@ -127,10 +158,11 @@ document.addEventListener("DOMContentLoaded", function () {
     premiumPrice.textContent = "500.000";
     premiumLabel.textContent = "YEARLY";
     premiumDesc.textContent = "Paket terpopuler dengan fitur lengkap untuk pembelajaran optimal";
+
     yearlyBtn.classList.add("active");
     monthlyBtn.classList.remove("active");
 
-    if (!introText.contains(promoLabel)) {
+    if (introText && !introText.contains(promoLabel)) {
       introText.insertBefore(promoLabel, toggleContainer);
     }
   }
@@ -141,122 +173,128 @@ document.addEventListener("DOMContentLoaded", function () {
   setMonthly();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".slider-track");
-  const cards = Array.from(document.querySelectorAll(".card-test"));
+  const viewport = document.querySelector(".viewport");
   const prevBtn = document.querySelector(".nav-btn.prev");
   const nextBtn = document.querySelector(".nav-btn.next");
-  const dots = Array.from(document.querySelectorAll(".pagination-test .dot"));
-  const viewport = document.querySelector(".viewport");
+  const dots = document.querySelectorAll(".pagination-test .dot");
 
-  if (!track || !cards.length) return;
-
-  let currentIndex = 1; 
+  let cards = Array.from(document.querySelectorAll(".card-test"));
   const visible = 3;
-  let autoplayTimer = null;
-  const autoplayDelay = 5000;
+  let index = 1;
+  let autoplay;
 
-  function computeStep() {
-    const cardRect = cards[0].getBoundingClientRect();
-    const left0 = cards[0].getBoundingClientRect().left;
-    const left1 = cards[1] ? cards[1].getBoundingClientRect().left : left0 + cardRect.width;
-    const gap = Math.round(left1 - left0 - cardRect.width);
-    return { step: cardRect.width + (gap || 18), cardWidth: cardRect.width };
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
+  firstClone.classList.add("clone");
+  lastClone.classList.add("clone");
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, cards[0]);
+
+  cards = Array.from(document.querySelectorAll(".card-test"));
+
+  function cardStep() {
+    return cards[0].offsetWidth + 19;
   }
 
-  function setActiveClasses(index) {
-    cards.forEach((c, i) => {
-      c.classList.toggle("active", i === index);
-      if (i === index) {
-        c.style.opacity = "1";
-      } else if (Math.abs(i - index) === 1 || Math.abs(i - index) === cards.length - 1) {
-        c.style.opacity = "0.76";
-      } else {
-        c.style.opacity = "0.62";
-      }
+  function setActive() {
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === index);
     });
 
-    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    dots.forEach((d, i) =>
+      d.classList.toggle("active", i === (index - 1 + dots.length) % dots.length)
+    );
   }
 
-  function updateTrack(index, animate = true) {
-    const { step } = computeStep();
-    const middlePos = Math.floor(visible / 2);
-    const offset = (index - middlePos) * step;
-    track.style.transition = animate ? "transform 600ms cubic-bezier(.2,.9,.3,1)" : "none";
-    track.style.transform = `translateX(-${offset}px)`;
-    setActiveClasses(index);
-  }
+  function move(animate = true) {
+    track.style.transition = animate
+      ? "transform 600ms cubic-bezier(.2,.9,.3,1)"
+      : "none";
 
-  function prev() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    updateTrack(currentIndex);
-    restartAutoplay();
+    track.style.transform = `translateX(-${(index - 1) * cardStep()}px)`;
+    setActive();
   }
 
   function next() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    updateTrack(currentIndex);
-    restartAutoplay();
+    index++;
+    move();
+
+    if (index === cards.length - 1) {
+      setTimeout(() => {
+        index = 1;
+        move(false);
+      }, 620);
+    }
   }
 
-  if (prevBtn) prevBtn.addEventListener("click", prev);
-  if (nextBtn) nextBtn.addEventListener("click", next);
+  function prev() {
+    index--;
+    move();
+
+    if (index === 0) {
+      setTimeout(() => {
+        index = cards.length - 2;
+        move(false);
+      }, 620);
+    }
+  }
+
+  prevBtn.onclick = prev;
+  nextBtn.onclick = next;
 
   dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      currentIndex = i;
-      updateTrack(currentIndex);
-      restartAutoplay();
-    });
+    dot.onclick = () => {
+      index = i + 1;
+      move();
+      restart();
+    };
   });
 
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(() => {
-      next();
-    }, autoplayDelay);
+  function start() {
+    autoplay = setInterval(next, 5000);
   }
 
-  function stopAutoplay() {
-    if (autoplayTimer) {
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    }
+  function stop() {
+    clearInterval(autoplay);
   }
 
-  function restartAutoplay() {
-    stopAutoplay();
-    startAutoplay();
+  function restart() {
+    stop();
+    start();
   }
 
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => updateTrack(currentIndex, false), 120);
-  });
+  viewport.addEventListener("mouseenter", stop);
+  viewport.addEventListener("mouseleave", start);
 
-  function init() {
-    if (cards.length < visible) {
-      currentIndex = 0;
-    } else {
-      currentIndex = currentIndex % cards.length;
-    }
-    setTimeout(() => updateTrack(currentIndex, false), 50);
-    startAutoplay();
-  }
-
-  viewport.addEventListener("mouseenter", stopAutoplay);
-  viewport.addEventListener("mouseleave", startAutoplay);
-
-  init();
+  move(false);
+  start();
 });
+
+
+document.querySelectorAll(".read-more").forEach(button => {
+  button.addEventListener("click", () => {
+    const text = button.previousElementSibling;
+
+    text.classList.toggle("expanded");
+
+    button.textContent = text.classList.contains("expanded")
+      ? "Tutup"
+      : "Lihat Selengkapnya";
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqItems.length) return;
 
   faqItems.forEach((item) => {
     const btn = item.querySelector(".faq-pertanyaan");
+    if (!btn) return;
 
     btn.addEventListener("click", () => {
       faqItems.forEach(i => {
@@ -267,4 +305,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
