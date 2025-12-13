@@ -18,6 +18,21 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+#beranda,
+#tentang,
+#fitur,
+#subscription {
+  scroll-margin-top: 90px;
+}
+
 
 nav.navbar {
   position: fixed;
@@ -1604,7 +1619,7 @@ li:last-child {
     display: none;
   }
 
-  
+
   .fitur-slider {
     display: flex;
     overflow-x: auto;
